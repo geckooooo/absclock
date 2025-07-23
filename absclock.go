@@ -2,9 +2,16 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
 func main() {
-	fmt.Println("Current time: ", time.Now())
+	var builder strings.Builder
+	builder.WriteString("Current time: ")
+	builder.WriteString(time.Now().String())
+
+	result := builder.String()
+
+	fmt.Println(result)
 }
