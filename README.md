@@ -3,9 +3,12 @@ The Absolute Clock
 
 Represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:P:?:?:?:?:2025:07:23:09:28:15`
+`E:P:?:?:?:?:2025:07:23:09:28:15:?:?`
 
-The Format:
+The general format:
+
+`E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
+
 
 * `E`: Eternity. The scope of all time. This is an invariant `E`.
 * `O`: Eon. Can be Hadean `H`, Archean `A`, Proterozoic `R`, or Phanerozoic `P` (the current eon).
@@ -19,6 +22,8 @@ The Format:
 * `HH`: The current hour. Military format. 00-23.
 * `MI`: The current minute. 00-59.
 * `SS`: The current second. 00-59.
+* `MS`: The current millisecond. 00-999.
+* `NS`: The current nanosecond. ?.
 
 This is the absolute time of the Big Bang:
 
