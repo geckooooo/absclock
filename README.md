@@ -36,7 +36,7 @@ The general format of Absolute Clock time is as follows:
     * Cenozoic: `10` (the current era)
     * `11..n` (subsequent eras)
 * `PE`: **Period.**
-    * pre-Paleozoic: `00` (Before the Paleozoic there are no periods)
+    * pre-Cambrian: `00` (Cambrian is the first geological period)
     * Cambrian: `01`
     * Ordovician: `02`
     * Silurian: `03`
