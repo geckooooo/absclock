@@ -1,6 +1,9 @@
 # absclock
 The Absolute Clock
 
+_TL;DR_
+To get the current absolute time: `go run absclock.go`
+
 Represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
 `E:4:3:?:?:?:2025:07:23:09:28:15:042:?`
