@@ -5,7 +5,7 @@
 
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:3:?:?:?:2025:07:23:09:28:15:042:654321`
+`E:4:?:?:?:?:2025:07:23:09:28:15:042:654321`
 
 
 ### General Format
@@ -61,7 +61,7 @@ This is the absolute time of the Big Bang:
 * Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
-* Only works on Earth pending implementation of timezones on other planets or moons.
+* Only works on Earth pending implementation of timezones on other planets or moons. Till then UTC is good enough.
 
 ### To Do:
 * subepoch, subperiod support? 
