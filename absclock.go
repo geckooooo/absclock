@@ -37,20 +37,27 @@ func main() {
 
 	// Build the string
 	var builder strings.Builder
-	builder.WriteString("E:")
-	builder.WriteString("P:")
-	builder.WriteString("C:")
-	builder.WriteString(year)
+	builder.WriteString("E:") // Eternity
+	builder.WriteString("P:") // Phanerozoic eon
+	builder.WriteString("C:") // Cenozoic era
+	builder.WriteString("?:") // ? period
+	builder.WriteString("?:") // ? epoch
+	builder.WriteString("?:") // ? age
+	builder.WriteString(year) // Year
 	builder.WriteString(":")
-	builder.WriteString(month)
+	builder.WriteString(month) // Month
 	builder.WriteString(":")
-	builder.WriteString(day)
+	builder.WriteString(day) // Day
 	builder.WriteString(":")
-	builder.WriteString(hour)
+	builder.WriteString(hour) // Hour
 	builder.WriteString(":")
-	builder.WriteString(minute)
+	builder.WriteString(minute) // Minute
 	builder.WriteString(":")
-	builder.WriteString(second)
+	builder.WriteString(second) // Second
+	builder.WriteString(":")
+	builder.WriteString("?") // Millisecond
+	builder.WriteString(":")
+	builder.WriteString("?") // Nanosecond
 
 	absTime := builder.String()
 
