@@ -66,9 +66,9 @@ The general format of Absolute Clock time is as follows:
 
 This is the absolute time of the Big Bang:
 
-`E:0:00:00:00:00:-14000000000:01:01:00:00:00:000:000000`
+`E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
 
-(this assumes the Big Bang started exactly 14 billion years ago on January 1st.)
+(this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
 
 ### Notes
 * Time is represented in Zulu time.
@@ -76,6 +76,7 @@ This is the absolute time of the Big Bang:
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 * Only works on Earth pending implementation of timezones on other planets or moons. Till then UTC is good enough.
+* Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
 
 ### To Do:
 * subepoch, subperiod support? 
