@@ -77,6 +77,7 @@ This is the absolute time of the Big Bang:
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 * Only works on Earth pending implementation of timezones on other planets or moons. Till then UTC is good enough.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
+    * That said, there could be Mars, Venus, and moon versions of this clock!
 
 ### To Do:
 * subepoch, subperiod support? 
