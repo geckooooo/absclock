@@ -55,6 +55,5 @@ _Notes:_
 
 _To do:_
 * subepoch, subperiod support? 
-* periods are different for different eras:
-** 
+* geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
