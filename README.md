@@ -64,5 +64,6 @@ This is the absolute time of the Big Bang:
 
 ### To Do:
 * subepoch, subperiod support? 
+* picoseconds, microseconds, etc. support?
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
