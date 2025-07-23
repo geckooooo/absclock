@@ -13,32 +13,32 @@ The general format:
 `E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
 
 
-* `E`: Eternity. The scope of all time. This is an invariant `E`.
-* `O`: Eon. Values: 
+* `E`: **Eternity.** The scope of all time. This is an invariant `E`.
+* `O`: **Eon.** Values: 
     * pre-Hadean `0`
     * Hadean `1`
     * Archean `2`
     * Proterozoic `3`
     * Phanerozoic `4` (the current eon)
     * `5..n` (subsequent eons)
-* `R`: Era. Values:
+* `R`: **Era.** Values:
     * pre-Eoarchean `0`
     * Neoproterozoic `?`
     * Paleozoic `1`
     * Mesozoic `2`
     * Cenozoic `3` (the current era)
     * `?..n` (subsequent eras)
-* `P`: Period. Quaternary `?` (the current period), , or `?..n` (subsequent periods).
-* `C`: Epoch. Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
-* `A`: Age. Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
-* `YYYY`: The current year. Unbounded.
-* `MM`: The current month. 01-12.
-* `DD`: The current day. 01-31.
-* `HH`: The current hour. Military format. 00-23.
-* `MI`: The current minute. 00-59.
-* `SS`: The current second. 00-59.
-* `MS`: The current millisecond. 00-999.
-* `NS`: The current nanosecond. ?.
+* `P`: **Period.** Quaternary `?` (the current period), , or `?..n` (subsequent periods).
+* `C`: **Epoch.** Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
+* `A`: **Age.** Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
+* `YYYY`: **Year.** Unbounded.
+* `MM`: **Month.** 01-12.
+* `DD`: **Day.** 01-31.
+* `HH`: **Hour.** Military format. 00-23.
+* `MI`: **Minute.** 00-59.
+* `SS`: **Second.** 00-59.
+* `MS`: **Millisecond.** 00-999.
+* `NS`: **Nanosecond.** ?.
 
 This is the absolute time of the Big Bang:
 
