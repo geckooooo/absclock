@@ -14,23 +14,27 @@ The general format:
 
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
-* `O`: **Eon.** Values: 
+* `O`: **Eon.**
     * pre-Hadean `0`
     * Hadean `1`
     * Archean `2`
     * Proterozoic `3`
     * Phanerozoic `4` (the current eon)
     * `5..n` (subsequent eons)
-* `R`: **Era.** Values:
+* `R`: **Era.**
     * pre-Eoarchean `0`
     * Neoproterozoic `?`
+    * ...
     * Paleozoic `1`
     * Mesozoic `2`
     * Cenozoic `3` (the current era)
     * `?..n` (subsequent eras)
-* `P`: **Period.** Quaternary `?` (the current period), , or `?..n` (subsequent periods).
-* `C`: **Epoch.** Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
-* `A`: **Age.** Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
+* `P`: **Period.**
+    * Quaternary `?` (the current period), , or `?..n` (subsequent periods).
+* `C`: **Epoch.** 
+    * Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
+* `A`: **Age.**
+    * Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
 * `YYYY`: **Year.** Unbounded.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
