@@ -36,3 +36,4 @@ _Notes:_
 _To do:_
 * Figure out how to represent the time between the Big Bang and the Hadean. (complication: all geologic elements don't exist before the Hadean)
 * Figure out how to represent B.C.E. dates
+* Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
