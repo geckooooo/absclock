@@ -14,9 +14,20 @@ The general format:
 
 
 * `E`: Eternity. The scope of all time. This is an invariant `E`.
-* `O`: Eon. Can be pre-Hadean `0`, Hadean `1`, Archean `2`, Proterozoic `3`, Phanerozoic `4` (the current eon), or `5..n` (subsequent eons).
-* `R`: Era. Can be:
-    * pre-Eoarchean `0`, Neoproterozoic `?`, Paleozoic `1`, Mesozoic `2`, Cenozoic `3` (the current era), or `4..n` (subsequent eras).
+* `O`: Eon. Values: 
+    * pre-Hadean `0`
+    * Hadean `1`
+    * Archean `2`
+    * Proterozoic `3`
+    * Phanerozoic `4` (the current eon)
+    * `5..n` (subsequent eons)
+* `R`: Era. Values:
+    * pre-Eoarchean `0`
+    * Neoproterozoic `?`
+    * Paleozoic `1`
+    * Mesozoic `2`
+    * Cenozoic `3` (the current era)
+    * `?..n` (subsequent eras)
 * `P`: Period. Quaternary `?` (the current period), , or `?..n` (subsequent periods).
 * `C`: Epoch. Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
 * `A`: Age. Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
