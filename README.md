@@ -21,16 +21,16 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
     * Phanerozoic: `4` (the current eon)
     * `5..n` (subsequent eons)
 * `ER`: **Era.**
-    * pre-Eoarchean: `0` (covering the pre-Hadean and Hadean; neither have eras)
-    * Eoarchean: `1`
-    * Paleoarchean: `2`
-    * Mesoarchean: `3`
-    * Neoarchean: `4`
-    * Paleoproterozoic: `5`
-    * Mesoproterozoic: `6`
-    * Neoproterozoic: `7`
-    * Paleozoic: `8`
-    * Mesozoic: `9`
+    * pre-Eoarchean: `00` (covering the pre-Hadean and Hadean; neither have eras)
+    * Eoarchean: `01`
+    * Paleoarchean: `02`
+    * Mesoarchean: `03`
+    * Neoarchean: `04`
+    * Paleoproterozoic: `05`
+    * Mesoproterozoic: `06`
+    * Neoproterozoic: `07`
+    * Paleozoic: `08`
+    * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
     * `?..n` (subsequent eras)
 * `P`: **Period.**
