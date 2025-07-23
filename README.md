@@ -61,6 +61,7 @@ This is the absolute time of the Big Bang:
 * Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
+* Only works on Earth pending implementation of timezones on other planets or moons.
 
 ### To Do:
 * subepoch, subperiod support? 
