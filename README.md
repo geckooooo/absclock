@@ -29,13 +29,16 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
     * Cenozoic: `3` (the current era)
     * `?..n` (subsequent eras)
 * `P`: **Period.**
-    * Quaternary: `?` (the current period), , or `?..n` (subsequent periods).
+    * Quaternary: `?` (the current period)
+    * `?..n` (subsequent periods)
 * `C`: **Epoch.** 
-    * Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
+    * Holocene `?` (the current epoch)
+    * `?..n` (subsequent epochs)
 * `A`: **Age.**
-    * Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
+    * Meghalayan `?` (the current age)
+    * `?..n` (subsequent ages)
 * `YYYY`: **Year.**
-    * Negative numbers represent BCE (e.g. `-500` is 500 BCE).
+    * Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
 * `HH`: **Hour.** 24-hour format. 00-23.
