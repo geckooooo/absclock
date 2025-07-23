@@ -47,7 +47,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 * `HH`: **Hour.** 24-hour format. 00-23.
 * `MI`: **Minute.** 00-59.
 * `SS`: **Second.** 00-59.
-* `MS`: **Millisecond.** 00-999.
+* `MMS`: **Millisecond.** 000-999.
 * `NS`: **Nanosecond.** ?.
 
 ### More Examples
@@ -58,6 +58,7 @@ This is the absolute time of the Big Bang:
 
 ### Notes
 * Time is represented in Zulu time.
+* Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
