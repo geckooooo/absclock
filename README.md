@@ -38,7 +38,7 @@ The general format:
 * `YYYY`: **Year.** Unbounded.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
-* `HH`: **Hour.** Military format. 00-23.
+* `HH`: **Hour.** 24-hour format. 00-23.
 * `MI`: **Minute.** 00-59.
 * `SS`: **Second.** 00-59.
 * `MS`: **Millisecond.** 00-999.
@@ -50,6 +50,7 @@ This is the absolute time of the Big Bang:
 
 _Notes:_
 * Time is represented in Zulu time.
+* Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
 _To do:_
