@@ -31,12 +31,12 @@ The general format of Absolute Clock time is as follows:
     * Paleoproterozoic: `05`
     * Mesoproterozoic: `06`
     * Neoproterozoic: `07`
-    * Paleozoic: `08`
+    * Paleozoic: `08` (first era to be broken out into geological periods)
     * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
     * `11..n` (subsequent eras)
 * `PE`: **Period.**
-    * pre-Cambrian: `00` (Cambrian is the first geological period)
+    * Precambrian: `00` (The Cambrian is the first period of the Paleozoic)
     * Cambrian: `01`
     * Ordovician: `02`
     * Silurian: `03`
