@@ -38,18 +38,20 @@ The general format of Absolute Clock time is as follows:
 * `PE`: **Period.**
     * pre-?: `00`
     * ...
-    * Quaternary: `?` (the current period)
+    * Cambrian: `??`
+    * ...
+    * Quaternary: `??` (the current period)
     * `?..n` (subsequent periods)
 * `EP`: **Epoch.** 
     * pre-?: `00`
     * ...
-    * Holocene `?` (the current epoch)
+    * Holocene `??` (the current epoch)
     * `?..n` (subsequent epochs)
 * `AG`: **Age.**
     * pre-?: `00`
     * ...
-    * Meghalayan `?` (the current age)
-    * `?..n` (subsequent ages)
+    * Meghalayan `??` (the current age)
+    * `??..n` (subsequent ages)
 * `YYYY`: **Year.**
     * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE.
 * `MM`: **Month.** 01-12.
