@@ -47,13 +47,13 @@ func main() {
 
 	// Build the string
 	var builder strings.Builder
-	builder.WriteString("E:") // Eternity
-	builder.WriteString("4:") // Phanerozoic eon
-	builder.WriteString("3:") // Cenozoic era
-	builder.WriteString("?:") // ? period
-	builder.WriteString("?:") // ? epoch
-	builder.WriteString("?:") // ? age
-	builder.WriteString(year) // Year
+	builder.WriteString("E:")  // Eternity
+	builder.WriteString("4:")  // Phanerozoic eon
+	builder.WriteString("10:") // Cenozoic era
+	builder.WriteString("?:")  // ? period
+	builder.WriteString("?:")  // ? epoch
+	builder.WriteString("?:")  // ? age
+	builder.WriteString(year)  // Year
 	builder.WriteString(":")
 	builder.WriteString(month) // Month
 	builder.WriteString(":")

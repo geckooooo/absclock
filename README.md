@@ -5,12 +5,12 @@
 
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:?:?:?:?:2025:07:23:09:28:15:042:654321`
+`E:4:10:?:?:?:2025:07:23:09:28:15:042:654321`
 
 
 ### General Format
 
-`E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
+`E:O:ER:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
@@ -20,13 +20,18 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
     * Proterozoic: `3`
     * Phanerozoic: `4` (the current eon)
     * `5..n` (subsequent eons)
-* `R`: **Era.**
-    * pre-Eoarchean: `0`
-    * Neoproterozoic: `?`
-    * ...
-    * Paleozoic: `1`
-    * Mesozoic: `2`
-    * Cenozoic: `3` (the current era)
+* `ER`: **Era.**
+    * pre-Eoarchean: `0` (covering the pre-Hadean and Hadean; neither have eras)
+    * Eoarchean: `1`
+    * Paleoarchean: `2`
+    * Mesoarchean: `3`
+    * Neoarchean: `4`
+    * Paleoproterozoic: `5`
+    * Mesoproterozoic: `6`
+    * Neoproterozoic: `7`
+    * Paleozoic: `8`
+    * Mesozoic: `9`
+    * Cenozoic: `10` (the current era)
     * `?..n` (subsequent eras)
 * `P`: **Period.**
     * ...
