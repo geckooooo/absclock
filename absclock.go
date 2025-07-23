@@ -50,9 +50,9 @@ func main() {
 	builder.WriteString("E:")  // Eternity
 	builder.WriteString("4:")  // Phanerozoic eon
 	builder.WriteString("10:") // Cenozoic era
-	builder.WriteString("?:")  // ? period
-	builder.WriteString("?:")  // ? epoch
-	builder.WriteString("?:")  // ? age
+	builder.WriteString("??:") // ? period
+	builder.WriteString("??:") // ? epoch
+	builder.WriteString("??:") // ? age
 	builder.WriteString(year)  // Year
 	builder.WriteString(":")
 	builder.WriteString(month) // Month

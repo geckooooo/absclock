@@ -12,7 +12,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 
 The general format of Absolute Clock time is as follows:
 
-`E:O:ER:P:C:A:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
+`E:O:ER:PE:EP:AG:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
@@ -35,15 +35,18 @@ The general format of Absolute Clock time is as follows:
     * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
     * `11..n` (subsequent eras)
-* `P`: **Period.**
+* `PE`: **Period.**
+    * pre-?: `00`
     * ...
     * Quaternary: `?` (the current period)
     * `?..n` (subsequent periods)
-* `C`: **Epoch.** 
+* `EP`: **Epoch.** 
+    * pre-?: `00`
     * ...
     * Holocene `?` (the current epoch)
     * `?..n` (subsequent epochs)
-* `A`: **Age.**
+* `AG`: **Age.**
+    * pre-?: `00`
     * ...
     * Meghalayan `?` (the current age)
     * `?..n` (subsequent ages)
@@ -61,7 +64,9 @@ The general format of Absolute Clock time is as follows:
 
 This is the absolute time of the Big Bang:
 
-`(add this once the last representation challenges are resolved)`
+`E:0:00:00:00:00:2-14000000000:01:01:00:00:00:000:000000`
+
+(this assumes the Big Bang started exactly 14 billion years ago starting January 1st.)
 
 ### Notes
 * Time is represented in Zulu time.
