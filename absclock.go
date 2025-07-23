@@ -18,6 +18,7 @@ func main() {
 	minute := strconv.Itoa(now.Minute())
 	second := strconv.Itoa(now.Second())
 	millisecond := strconv.Itoa(now.Nanosecond() / 1000000)
+	nanosecond := strconv.Itoa(now.Nanosecond() / 1000) // withn the current millisecond
 
 	// Pad the values with a leading zero if tanyhey are less than 10.
 	if now.Month() < 10 {
@@ -38,6 +39,10 @@ func main() {
 
 	if (now.Nanosecond() / 1000000) < 100 {
 		millisecond = "0" + millisecond
+	}
+
+	if (now.Nanosecond() / 1000) < 100000 {
+		nanosecond = "0" + nanosecond
 	}
 
 	// Build the string
@@ -62,7 +67,7 @@ func main() {
 	builder.WriteString(":")
 	builder.WriteString(millisecond) // Millisecond
 	builder.WriteString(":")
-	builder.WriteString("?") // Nanosecond
+	builder.WriteString(nanosecond) // Nanosecond
 
 	absTime := builder.String()
 
