@@ -1,35 +1,35 @@
 # The Absolute Clock
 
-_TL;DR_
+###TL;DR
 * To get the current absolute time: `go run absclock.go`
 
-Represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
+The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
 `E:4:3:?:?:?:2025:07:23:09:28:15:042:?`
 
-The general format:
+
+###General Format
 
 `E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
 
-
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
-    * pre-Hadean `0`
-    * Hadean `1`
-    * Archean `2`
-    * Proterozoic `3`
-    * Phanerozoic `4` (the current eon)
+    * pre-Hadean: `0`
+    * Hadean: `1`
+    * Archean: `2`
+    * Proterozoic: `3`
+    * Phanerozoic: `4` (the current eon)
     * `5..n` (subsequent eons)
 * `R`: **Era.**
-    * pre-Eoarchean `0`
-    * Neoproterozoic `?`
+    * pre-Eoarchean: `0`
+    * Neoproterozoic: `?`
     * ...
-    * Paleozoic `1`
-    * Mesozoic `2`
-    * Cenozoic `3` (the current era)
+    * Paleozoic: `1`
+    * Mesozoic: `2`
+    * Cenozoic: `3` (the current era)
     * `?..n` (subsequent eras)
 * `P`: **Period.**
-    * Quaternary `?` (the current period), , or `?..n` (subsequent periods).
+    * Quaternary: `?` (the current period), , or `?..n` (subsequent periods).
 * `C`: **Epoch.** 
     * Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
 * `A`: **Age.**
@@ -44,16 +44,18 @@ The general format:
 * `MS`: **Millisecond.** 00-999.
 * `NS`: **Nanosecond.** ?.
 
+###More Examples
+
 This is the absolute time of the Big Bang:
 
 `(add this once the last representation challenges are resolved)`
 
-_Notes:_
+###Notes
 * Time is represented in Zulu time.
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
-_To do:_
+###To Do:
 * subepoch, subperiod support? 
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
