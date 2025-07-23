@@ -45,12 +45,12 @@ The general format of Absolute Clock time is as follows:
     * Permian:  `06`
     * ...
     * Quaternary: `??` (the current period)
-    * `?..n` (subsequent periods)
+    * `??..n` (subsequent periods)
 * `EP`: **Epoch.** 
     * pre-?: `00`
     * ...
     * Holocene `??` (the current epoch)
-    * `?..n` (subsequent epochs)
+    * `??..n` (subsequent epochs)
 * `AG`: **Age.**
     * pre-?: `00`
     * ...
