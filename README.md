@@ -1,6 +1,6 @@
 # The Absolute Clock
 
-###TL;DR
+### TL;DR
 * To get the current absolute time: `go run absclock.go`
 
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
@@ -8,7 +8,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 `E:4:3:?:?:?:2025:07:23:09:28:15:042:?`
 
 
-###General Format
+### General Format
 
 `E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
 
@@ -44,18 +44,18 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 * `MS`: **Millisecond.** 00-999.
 * `NS`: **Nanosecond.** ?.
 
-###More Examples
+### More Examples
 
 This is the absolute time of the Big Bang:
 
 `(add this once the last representation challenges are resolved)`
 
-###Notes
+### Notes
 * Time is represented in Zulu time.
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
-###To Do:
+### To Do:
 * subepoch, subperiod support? 
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
