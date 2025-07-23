@@ -47,8 +47,8 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 * `HH`: **Hour.** 24-hour format. 00-23.
 * `MI`: **Minute.** 00-59.
 * `SS`: **Second.** 00-59.
-* `MMS`: **Millisecond.** 000-999.
-* `NS`: **Nanosecond.** ?.
+* `MSS`: **Millisecond.** 000-999.
+* `NSSSSS`: **Nanosecond.** 000000-999999.
 
 ### More Examples
 
