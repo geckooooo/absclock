@@ -12,7 +12,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 
 The general format of Absolute Clock time is as follows:
 
-`E:O:ER:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
+`E:O:ER:P:C:A:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
@@ -34,7 +34,7 @@ The general format of Absolute Clock time is as follows:
     * Paleozoic: `08`
     * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
-    * `?..n` (subsequent eras)
+    * `11..n` (subsequent eras)
 * `P`: **Period.**
     * ...
     * Quaternary: `?` (the current period)
@@ -54,7 +54,7 @@ The general format of Absolute Clock time is as follows:
 * `HH`: **Hour.** 24-hour format. 00-23.
 * `MI`: **Minute.** 00-59.
 * `SS`: **Second.** 00-59.
-* `MSS`: **Millisecond.** 000-999.
+* `MSS`: **Millisecond.** 000-999. (1s = 1000ms.)
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
 ### More Examples
