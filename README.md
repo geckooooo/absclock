@@ -1,7 +1,7 @@
 # The Absolute Clock
 
 ### TL;DR
-* To get the current absolute time: `go run absclock.go`
+* To get the current absolute time: `% go run absclock.go`
 
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
@@ -41,7 +41,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
     * Meghalayan `?` (the current age)
     * `?..n` (subsequent ages)
 * `YYYY`: **Year.**
-    * Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE.
+    * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
 * `HH`: **Hour.** 24-hour format. 00-23.
