@@ -29,12 +29,15 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
     * Cenozoic: `3` (the current era)
     * `?..n` (subsequent eras)
 * `P`: **Period.**
+    * ...
     * Quaternary: `?` (the current period)
     * `?..n` (subsequent periods)
 * `C`: **Epoch.** 
+    * ...
     * Holocene `?` (the current epoch)
     * `?..n` (subsequent epochs)
 * `A`: **Age.**
+    * ...
     * Meghalayan `?` (the current age)
     * `?..n` (subsequent ages)
 * `YYYY`: **Year.**
