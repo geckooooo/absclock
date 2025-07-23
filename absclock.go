@@ -39,6 +39,7 @@ func main() {
 	var builder strings.Builder
 	builder.WriteString("E:")
 	builder.WriteString("P:")
+	builder.WriteString("C:")
 	builder.WriteString(year)
 	builder.WriteString(":")
 	builder.WriteString(month)
