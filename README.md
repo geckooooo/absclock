@@ -5,7 +5,7 @@
 
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:3:?:?:?:2025:07:23:09:28:15:042:?`
+`E:4:3:?:?:?:2025:07:23:09:28:15:042:654321`
 
 
 ### General Format
@@ -48,7 +48,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 * `MI`: **Minute.** 00-59.
 * `SS`: **Second.** 00-59.
 * `MSS`: **Millisecond.** 000-999.
-* `NSSSSS`: **Nanosecond.** 000000-999999.
+* `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
 ### More Examples
 
