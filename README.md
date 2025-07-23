@@ -64,7 +64,7 @@ The general format of Absolute Clock time is as follows:
 
 This is the absolute time of the Big Bang:
 
-`E:0:00:00:00:00:2-14000000000:01:01:00:00:00:000:000000`
+`E:0:00:00:00:00:-14000000000:01:01:00:00:00:000:000000`
 
 (this assumes the Big Bang started exactly 14 billion years ago starting January 1st.)
 
