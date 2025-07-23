@@ -8,7 +8,9 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 `E:4:10:?:?:?:2025:07:23:09:28:15:042:654321`
 
 
-### General Format
+### Absolute Time Representation
+
+The general format of Absolute Clock time is as follows:
 
 `E:O:ER:P:C:A:YYYY:MM:DD:HH:MM:SS:MS:NS`
 
