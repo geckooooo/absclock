@@ -15,10 +15,11 @@ The general format:
 
 * `E`: Eternity. The scope of all time. This is an invariant `E`.
 * `O`: Eon. Can be pre-Hadean `0`, Hadean `1`, Archean `2`, Proterozoic `3`, Phanerozoic `4` (the current eon), or `5..n` (subsequent eons).
-* `R`: Era. Can be pre-Paleozoic `0`, Paleozoic `1`, Mesozoic `2`, Cenozoic `3` (the current era), or `4..n` (subsequent eras).
-* `P`: Period.
-* `C`: Epoch.
-* `A`: Age.
+* `R`: Era. Can be:
+** pre-Eoarchean `0`, Neoproterozoic `?`, Paleozoic `1`, Mesozoic `2`, Cenozoic `3` (the current era), or `4..n` (subsequent eras).
+* `P`: Period. Quaternary `?` (the current period), , or `?..n` (subsequent periods).
+* `C`: Epoch. Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
+* `A`: Age. Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
 * `YYYY`: The current year. Unbounded.
 * `MM`: The current month. 01-12.
 * `DD`: The current day. 01-31.
@@ -38,4 +39,7 @@ _Notes:_
 
 _To do:_
 * Figure out how to represent B.C.E. dates (negative values?)
+* subepoch, subperiod support? 
+* periods are different for different eras:
+** 
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
