@@ -24,3 +24,4 @@ Time is represented in Zulu time.
 
 To do:
 * Figure out how to represent the time between the Big Bang and the Hadean.
+* Figure out how to represent B.C.E. dates
