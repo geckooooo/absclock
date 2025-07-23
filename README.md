@@ -1,5 +1,4 @@
-# absclock
-## The Absolute Clock
+# The Absolute Clock
 
 _TL;DR_
 * To get the current absolute time: `go run absclock.go`
@@ -35,7 +34,8 @@ The general format:
     * Holocene `?` (the current epoch), , or `?..n` (subsequent epochs).
 * `A`: **Age.**
     * Meghalayan `?` (the current age), , or `?..n` (subsequent ages).
-* `YYYY`: **Year.** Unbounded.
+* `YYYY`: **Year.**
+    * Negative numbers represent BCE (e.g. `-500` is 500 BCE).
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
 * `HH`: **Hour.** 24-hour format. 00-23.
@@ -54,7 +54,6 @@ _Notes:_
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
 _To do:_
-* Figure out how to represent B.C.E. dates (negative values?)
 * subepoch, subperiod support? 
 * periods are different for different eras:
 ** 
