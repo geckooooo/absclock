@@ -3,7 +3,7 @@ The Absolute Clock
 
 Represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:P:?:?:?:?:2025:07:23:09:28:15:?:?`
+`E:4:3:?:?:?:2025:07:23:09:28:15:042:?`
 
 The general format:
 
@@ -11,8 +11,8 @@ The general format:
 
 
 * `E`: Eternity. The scope of all time. This is an invariant `E`.
-* `O`: Eon. Can be Hadean `H`, Archean `A`, Proterozoic `R`, or Phanerozoic `P` (the current eon).
-* `R`: Era. Can be Paleozoic `P`, Mesozoic `M`, or Cenozoic `C` (the current era).
+* `O`: Eon. Can be pre-Hadean `0`, Hadean `1`, Archean `2`, Proterozoic `3`, Phanerozoic `4` (the current eon), or `5..n` (subsequent eons).
+* `R`: Era. Can be pre-Paleozoic `0`, Paleozoic `1`, Mesozoic `2`, Cenozoic `3` (the current era), or `4..n` (subsequent eras).
 * `P`: Period.
 * `C`: Epoch.
 * `A`: Age.
@@ -34,6 +34,5 @@ _Notes:_
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
 
 _To do:_
-* Figure out how to represent the time between the Big Bang and the Hadean. (complication: all geologic elements don't exist before the Hadean)
-* Figure out how to represent B.C.E. dates
+* Figure out how to represent B.C.E. dates (negative values?)
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)

@@ -17,6 +17,7 @@ func main() {
 	hour := strconv.Itoa(now.Hour())
 	minute := strconv.Itoa(now.Minute())
 	second := strconv.Itoa(now.Second())
+	millisecond := strconv.Itoa(now.Nanosecond() / 1000000)
 
 	// Pad the values with a leading zero if tanyhey are less than 10.
 	if now.Month() < 10 {
@@ -35,11 +36,15 @@ func main() {
 		second = "0" + second
 	}
 
+	if (now.Nanosecond() / 1000000) < 100 {
+		millisecond = "0" + millisecond
+	}
+
 	// Build the string
 	var builder strings.Builder
 	builder.WriteString("E:") // Eternity
-	builder.WriteString("P:") // Phanerozoic eon
-	builder.WriteString("C:") // Cenozoic era
+	builder.WriteString("4:") // Phanerozoic eon
+	builder.WriteString("3:") // Cenozoic era
 	builder.WriteString("?:") // ? period
 	builder.WriteString("?:") // ? epoch
 	builder.WriteString("?:") // ? age
@@ -55,7 +60,7 @@ func main() {
 	builder.WriteString(":")
 	builder.WriteString(second) // Second
 	builder.WriteString(":")
-	builder.WriteString("?") // Millisecond
+	builder.WriteString(millisecond) // Millisecond
 	builder.WriteString(":")
 	builder.WriteString("?") // Nanosecond
 
