@@ -135,6 +135,18 @@ The general format of Absolute Clock time is as follows:
 * `MSS`: **Millisecond.** 000-999. (1s = 1000ms.)
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
+
+### Notation Variations
+
+the first portion of the string prior to the year--from eternity to age, `E:4:3:3:2:3`--isn't likely to be relevant on a day to day basis for most people and can be omitted for practicality. The notation for ignoring unwanted larger time units on the left (for example, leaving only year to nanoseconds) is:
+
+`YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
+
+To ignore smaller units, say for rounding to the second, simply truncate them the same way from the right:
+
+`E:O:R:PE:EP:AG:YYYY:MM:DD:HH:MM:SS`
+
+
 ### More Absolute Time Examples
 
 * Big Bang: `E:0:0:00:00:00:-13800000000:01:01:00:00:00:000:000000`
