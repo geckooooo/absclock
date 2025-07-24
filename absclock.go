@@ -55,7 +55,7 @@ func main() {
 	builder.WriteString("4:")  // Phanerozoic eon.
 	builder.WriteString("10:") // Cenozoic era.
 	builder.WriteString("12:") // Quaternary period.
-	builder.WriteString("32:") // Holocene epoch.
+	builder.WriteString("31:") // Holocene epoch.
 	builder.WriteString("??:") // Meghalayan age.
 
 	builder.WriteString(year) // Year

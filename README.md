@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:12:32:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:10:12:31:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -15,7 +15,7 @@ Our default representation of time is goofy:
 * There is currently no universal time system in use that goes back to the Big Bang.
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
 
-The Absolute Clock rationalizes these different incomnsistent and incomplerte perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
+The Absolute Clock rationalizes these different inconsistent and incomplete perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
 
 ### Absolute Time Representation
