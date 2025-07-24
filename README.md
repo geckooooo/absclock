@@ -181,10 +181,12 @@ To get the current absolute time: `% go run absclock.go`
 ### To Do:
 * geological time enumerations should be scoped to the parent time unit. Fix epoch and age.
 * should the Meghalayan age be softcoded/calculated in the reference implementation?
-* subepoch, subperiod support? 
-* picoseconds, microseconds, etc. support?
+* consider subepoch, subperiod support
+* consider picoseconds, microseconds, etc. support
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
 * how to represent the absence of any ages for the Přídolí epoch. An age of `0` indicates the time before the first age.
+* figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
+
