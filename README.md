@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:3:3:??:3:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:3:3:2:3:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -61,36 +61,36 @@ The general format of Absolute Clock time is as follows:
     * Quaternary: `3` (the current period)
     * `13..n` (future periods)
 * `EP`: **Epoch.** 
-    * pre-Llandovery: `00`
-    * Llandovery: `01` (first epoch of the Silurian period)
-    * Wenlock: `02`
-    * Ludlow: `03`
-    * Přídolí: `04` (has no ages) 
-    * Early Devonian: `01` (first epoch of the Devonian period)
-    * Middle Devonian: `02`
-    * Late Devonian: `03`
-    * Mississippian: `01` (first epoch of the Carboniferous period)
-    * Pennsylvanian: `02`
+    * pre-Llandovery: `0`
+    * Llandovery: `1` (first epoch of the Silurian period)
+    * Wenlock: `2`
+    * Ludlow: `3`
+    * Přídolí: `1` (has no ages) 
+    * Early Devonian: `1` (first epoch of the Devonian period)
+    * Middle Devonian: `2`
+    * Late Devonian: `3`
+    * Mississippian: `1` (first epoch of the Carboniferous period)
+    * Pennsylvanian: `2`
     * ...
-    * Cisuralian: `14`
-    * Guadalupian: `15`
-    * Lopingian: `16`
-    * Early Triassic: `17`
-    * Middle Triassic: `18`
-    * Late Triassic: `19`
-    * Early Jurassic: `20`
-    * Middle Jurassic: `21`
-    * Late Jurassic: `22`
-    * Early Cretaceous: `23`
-    * Late Cretaceous: `24`
-    * Paleocene: `25`
-    * Eocene: `26`
-    * Oligocene: `27`
-    * Miocene: `28`
-    * Pliocene: `29`
-    * Pleistocene: `30`
-    * Holocene `31` (the current epoch)
-    * `32..n` (future epochs)
+    * Cisuralian: `n`
+    * Guadalupian: `n`
+    * Lopingian: `n`
+    * Early Triassic: `1`
+    * Middle Triassic: `1`
+    * Late Triassic: `3`
+    * Early Jurassic: `1`
+    * Middle Jurassic: `2`
+    * Late Jurassic: `3`
+    * Early Cretaceous: `1`
+    * Late Cretaceous: `2`
+    * Paleocene: `n`
+    * Eocene: `n`
+    * Oligocene: `n`
+    * Miocene: `n`
+    * Pliocene: `n`
+    * Pleistocene: `1` (first epoch of the Carboniferous period)
+    * Holocene `2` (the current epoch)
+    * `3..n` (future epochs)
 * `AG`: **Age.**
     * pre-Rhuddanian: `0`
     * Rhuddanian: `1` (first age of the Llandovery epoch)
@@ -171,3 +171,4 @@ To get the current absolute time: `% go run absclock.go`
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
+* how to represent the absence of any ages for the Přídolí epoch. An age of `0` indicates the time before the first age.
