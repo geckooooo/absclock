@@ -44,7 +44,7 @@ The general format of Absolute Clock time is as follows:
     * Paleozoic: `1` (first Phanerozoic era, first to be divided into geological periods)
     * Mesozoic: `2`
     * Cenozoic: `3` (the current era)
-    * `1..n` (future eras)
+    * `1..n` (first era of a future eon)
 * `PE`: **Period.**
     * Precambrian: `0` 
     * Cambrian: `1` (first period of the Paleozoic)
@@ -59,7 +59,7 @@ The general format of Absolute Clock time is as follows:
     * Paleogene: `1` (first period of the Cenozoic)
     * Neogene: `2`
     * Quaternary: `3` (the current period)
-    * `1..n` (future periods)
+    * `1..n` (first period of a future era)
 * `EP`: **Epoch.** 
     * pre-Llandovery: `0`
     * Llandovery: `1` (first epoch of the Silurian period)
@@ -90,7 +90,7 @@ The general format of Absolute Clock time is as follows:
     * Pliocene: `n`
     * Pleistocene: `1` (first epoch of the Carboniferous period)
     * Holocene `2` (the current epoch)
-    * `3..n` (future epochs)
+    * `1..n` (first epoch of a future period)
 * `AG`: **Age.**
     * pre-Rhuddanian: `0`
     * Rhuddanian: `1` (first age of the Llandovery epoch)
@@ -124,7 +124,7 @@ The general format of Absolute Clock time is as follows:
     * Greenlandian: `1` (first age of the Holocene)
     * Northgrippian: `2`
     * Meghalayan `3` (the current age)
-    * `1..n` (future ages)
+    * `1..n` (first age of a future epoch)
 * `YYYY`: **Year.**
     * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. Conventionally 4 digits, but can be any length.
 * `MM`: **Month.** 01-12.
