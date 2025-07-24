@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Get the current time broken into its components.
-	// Time is represented in Zulu time.
+	// Time is represented in UTC.
 	now := time.Now().UTC()
 	year := strconv.Itoa(now.Year())
 	month := strconv.Itoa(int(now.Month()))
@@ -20,7 +20,7 @@ func main() {
 	millisecond := strconv.Itoa(now.Nanosecond() / 1000000)
 	nanosecond := strconv.Itoa(now.Nanosecond() / 1000) // withn the current millisecond
 
-	// Pad the values with a leading zero if tanyhey are less than 10.
+	// Pad the values with a leading zero if needed.
 	if now.Month() < 10 {
 		month = "0" + month
 	}
@@ -52,7 +52,7 @@ func main() {
 	builder.WriteString("E:")  // Eternity.
 	builder.WriteString("4:")  // Phanerozoic eon.
 	builder.WriteString("10:") // Cenozoic era.
-	builder.WriteString("??:") // Quaternary period.
+	builder.WriteString("11:") // Quaternary period.
 	builder.WriteString("??:") // Holocene epoch.
 	builder.WriteString("??:") // Meghalayan age.
 

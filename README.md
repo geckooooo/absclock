@@ -1,11 +1,9 @@
 # The Absolute Clock
 
-### TL;DR
-* To get the current absolute time: `% go run absclock.go`
-
+### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:?:?:?:2025:07:23:09:28:15:042:654321`
+`E:4:10:11:?:?:2025:07:23:09:28:15:042:654321`
 
 
 ### Absolute Time Representation
@@ -16,7 +14,7 @@ The general format of Absolute Clock time is as follows:
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
-    * pre-Hadean: `0`
+    * pre-Hadean: `0` (Big Bang to the formation of Earth)
     * Hadean: `1`
     * Archean: `2`
     * Proterozoic: `3`
@@ -36,16 +34,19 @@ The general format of Absolute Clock time is as follows:
     * Cenozoic: `10` (the current era)
     * `11..n` (subsequent eras)
 * `PE`: **Period.**
-    * Precambrian: `00` (The Cambrian is the first period of the Paleozoic)
-    * Cambrian: `01`
+    * Precambrian: `00` 
+    * Cambrian: `01` (first period of the Paleozoic)
     * Ordovician: `02`
     * Silurian: `03`
     * Devonian: `04`
     * Carboniferous: `05` 
     * Permian:  `06`
-    * ...
-    * Quaternary: `??` (the current period)
-    * `??..n` (subsequent periods)
+    * Triassic: `07`
+    * Jurassic: `08`
+    * Paleogene: `09`
+    * Neogene: `10`
+    * Quaternary: `11` (the current period)
+    * `12..n` (subsequent periods)
 * `EP`: **Epoch.** 
     * pre-?: `00`
     * ...
@@ -57,7 +58,7 @@ The general format of Absolute Clock time is as follows:
     * Meghalayan `??` (the current age)
     * `??..n` (subsequent ages)
 * `YYYY`: **Year.**
-    * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE.
+    * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. Conventionally 4 digits, but can be any length.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
 * `HH`: **Hour.** 24-hour format. 00-23.
@@ -73,6 +74,11 @@ This is the absolute time of the Big Bang:
 `E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
 
 (this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
+
+
+### TL;DR
+To get the current absolute time: `% go run absclock.go`
+
 
 ### Notes
 * Time is represented in Zulu time.
