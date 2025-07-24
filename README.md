@@ -59,7 +59,7 @@ The general format of Absolute Clock time is as follows:
     * Paleogene: `1` (first period of the Cenozoic)
     * Neogene: `2`
     * Quaternary: `3` (the current period)
-    * `13..n` (future periods)
+    * `1..n` (future periods)
 * `EP`: **Epoch.** 
     * pre-Llandovery: `0`
     * Llandovery: `1` (first epoch of the Silurian period)
