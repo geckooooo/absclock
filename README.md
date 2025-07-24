@@ -131,11 +131,15 @@ The general format of Absolute Clock time is as follows:
 * Declaration of Independence: 
 
 
-### TL;DR
+### Reference Implementation
+
+This project implements this time notation with a reference implementation written in Go. This simple program spits out the current time in absolute time format.
+
 To get the current absolute time: `% go run absclock.go`
 
 
 ### Notes
+
 * Time is represented in UTC.
 * Only works on Earth pending implementation of consistent geological time primitives across multiple planets or moons. Currently other planets and satellites (like Mars, Venus, and the moon) have their own specific geological time.
 * Each time component is a subcomponent of the prior one (immediate left).
