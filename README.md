@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:12:31:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:10:12:31:??:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -65,7 +65,7 @@ The general format of Absolute Clock time is as follows:
     * Llandovery: `01` (first epoch of the Silurian period)
     * Wenlock:  `02`
     * Ludlow: `03`
-    * Přídolí: `04` 
+    * Přídolí: `04` (has no ages) 
     * Lochkovian: `05`
     * Pragian: `06`
     * Emsian: `07`
@@ -103,6 +103,9 @@ The general format of Absolute Clock time is as follows:
     * Homerian: `05`
     * Gorstian: `06`
     * Ludfordian: `07`
+    * Lower Lochkovian: `08`
+    * Middle Lochkovian: `09`
+    * Upper Lochkovian: `10`
     * ...
     * Hettangian: `nn`
     * Danian: `nn` (first age of the Paleocene epoch)
@@ -143,6 +146,7 @@ To get the current absolute time: `% go run absclock.go`
     * That said, there could be Mars, Venus, and moon versions of this clock!
 
 ### To Do:
+* should geological time enumerations be scoped to the parent time unit? Currently they're treated as a flat list, which isn't how it works for nanoseconds.
 * subepoch, subperiod support? 
 * picoseconds, microseconds, etc. support?
 * geological time element subunits vary based on the element; determine this representation
