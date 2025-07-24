@@ -50,13 +50,13 @@ func main() {
 	// Build the string
 	var builder strings.Builder
 
-	// Safe to hardcode these values.
+	// Safe to hardcode these values; they won't change before this program is long forgotten.
 	builder.WriteString("E:")  // Eternity.
 	builder.WriteString("4:")  // Phanerozoic eon.
-	builder.WriteString("10:") // Cenozoic era.
-	builder.WriteString("12:") // Quaternary period.
+	builder.WriteString("3:")  // Cenozoic era.
+	builder.WriteString("3:")  // Quaternary period.
 	builder.WriteString("31:") // Holocene epoch.
-	builder.WriteString("??:") // Meghalayan age.
+	builder.WriteString("3:")  // Meghalayan age.
 
 	builder.WriteString(year) // Year
 	builder.WriteString(":")

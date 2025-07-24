@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:12:31:??:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:3:3:??:3:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -22,7 +22,7 @@ The Absolute Clock rationalizes these different inconsistent and incomplete pers
 
 The general format of Absolute Clock time is as follows:
 
-`E:O:ER:PE:EP:AG:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
+`E:O:R:PE:EP:AG:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
@@ -32,49 +32,46 @@ The general format of Absolute Clock time is as follows:
     * Proterozoic: `3`
     * Phanerozoic: `4` (the current eon)
     * `5..n` (future eons)
-* `ER`: **Era.**
-    * pre-Eoarchean: `00` (covering the pre-Hadean and Hadean; neither have eras)
-    * Eoarchean: `01`
-    * Paleoarchean: `02`
-    * Mesoarchean: `03`
-    * Neoarchean: `04`
-    * Paleoproterozoic: `05`
-    * Mesoproterozoic: `06`
-    * Neoproterozoic: `07`
-    * Paleozoic: `08` (first era to be divided into geological periods)
-    * Mesozoic: `09`
-    * Cenozoic: `10` (the current era)
-    * `11..n` (future eras)
+* `R`: **Era.**
+    * pre-Eoarchean: `0` (covering the pre-Hadean and Hadean; neither have eras)
+    * Eoarchean: `1` (first era of the Archean eon)
+    * Paleoarchean: `2`
+    * Mesoarchean: `3`
+    * Neoarchean: `4`
+    * Paleoproterozoic: `1` (first era of the Proterozoic eon)
+    * Mesoproterozoic: `2`
+    * Neoproterozoic: `3`
+    * Paleozoic: `1` (first Phanerozoic era, first to be divided into geological periods)
+    * Mesozoic: `2`
+    * Cenozoic: `3` (the current era)
+    * `1..n` (future eras)
 * `PE`: **Period.**
-    * Precambrian: `00` 
-    * Cambrian: `01` (first period of the Paleozoic)
-    * Ordovician: `02`
-    * Silurian: `03` (first period to be divided into geological epochs)
-    * Devonian: `04`
-    * Carboniferous: `05` 
-    * Permian:  `06`
-    * Triassic: `07`
-    * Jurassic: `08`
-    * Cretaceous: `09`
-    * Paleogene: `10`
-    * Neogene: `11`
-    * Quaternary: `12` (the current period)
+    * Precambrian: `0` 
+    * Cambrian: `1` (first period of the Paleozoic)
+    * Ordovician: `2`
+    * Silurian: `3` (first period to be divided into geological epochs)
+    * Devonian: `4`
+    * Carboniferous: `5` 
+    * Permian:  `6`
+    * Triassic: `1` (first period of the Mesozoic)
+    * Jurassic: `2`
+    * Cretaceous: `3`
+    * Paleogene: `1` (first period of the Cenozoic)
+    * Neogene: `2`
+    * Quaternary: `3` (the current period)
     * `13..n` (future periods)
 * `EP`: **Epoch.** 
     * pre-Llandovery: `00`
     * Llandovery: `01` (first epoch of the Silurian period)
-    * Wenlock:  `02`
+    * Wenlock: `02`
     * Ludlow: `03`
     * Přídolí: `04` (has no ages) 
-    * Lochkovian: `05`
-    * Pragian: `06`
-    * Emsian: `07`
-    * Eifelian: `08`
-    * Givetian: `09`
-    * Frasnian: `10`
-    * Famennian: `11`
-    * Mississippian: `12`
-    * Pennsylvanian: `13`
+    * Early Devonian: `01` (first epoch of the Devonian period)
+    * Middle Devonian: `02`
+    * Late Devonian: `03`
+    * Mississippian: `01` (first epoch of the Carboniferous period)
+    * Pennsylvanian: `02`
+    * ...
     * Cisuralian: `14`
     * Guadalupian: `15`
     * Lopingian: `16`
@@ -95,25 +92,39 @@ The general format of Absolute Clock time is as follows:
     * Holocene `31` (the current epoch)
     * `32..n` (future epochs)
 * `AG`: **Age.**
-    * pre-Rhuddanian: `00`
-    * Rhuddanian: `01` (first age of the Llandovery epoch)
-    * Aeronian: `02`
-    * Telychian: `03`
-    * Sheinwoodian: `04`
-    * Homerian: `05`
-    * Gorstian: `06`
-    * Ludfordian: `07`
-    * Lower Lochkovian: `08`
-    * Middle Lochkovian: `09`
-    * Upper Lochkovian: `10`
+    * pre-Rhuddanian: `0`
+    * Rhuddanian: `1` (first age of the Llandovery epoch)
+    * Aeronian: `2`
+    * Telychian: `3`
+    * Sheinwoodian: `1` (first age of the Wenlock epoch)
+    * Homerian: `2`
+    * Gorstian: `1` (first age of the Ludlow epoch)
+    * Ludfordian: `2`
+    * Lochkovian: `1` (first age of the Early Devonian epoch)
+    * Pragian: `2`
+    * Emsian: `3`
+    * Eifelian: `1` (first age of the Middle Devonian epoch)
+    * Givetian: `2`
+    * Frasnian: `1` (first age of the Late Devonian epoch)
+    * Famennian: `2`
+    * Tournaisian: `1` (first age of the Mississippian epoch)
     * ...
-    * Hettangian: `nn`
-    * Danian: `nn` (first age of the Paleocene epoch)
-    * Selandian: `nn`
-    * Thanetian: `nn`
+    * Lower Lochkovian: `1` (first age of the Lochkovian epoch)
+    * Middle Lochkovian: `2`
+    * Upper Lochkovian: `3`
     * ...
-    * Meghalayan `??` (the current age)
-    * `??..n` (future ages)
+    * Hettangian: `n`
+    * Danian: `n` (first age of the Paleocene epoch)
+    * Selandian: `n`
+    * Thanetian: `n`
+    * ...
+    * Gelasian: `1` (first age of the Pleistocene)
+    * Calabrian: `2`
+    * Chibanian: `3`
+    * Greenlandian: `1` (first age of the Holocene)
+    * Northgrippian: `2`
+    * Meghalayan `3` (the current age)
+    * `1..n` (future ages)
 * `YYYY`: **Year.**
     * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. Conventionally 4 digits, but can be any length.
 * `MM`: **Month.** 01-12.
@@ -126,7 +137,7 @@ The general format of Absolute Clock time is as follows:
 
 ### More Absolute Time Examples
 
-* Big Bang: `E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
+* Big Bang: `E:0:0:00:00:00:-13800000000:01:01:00:00:00:000:000000`
     * (this assumes the Big Bang started exactly 13.8 billion years ago.)
 * Declaration of Independence: 
 
@@ -148,9 +159,12 @@ To get the current absolute time: `% go run absclock.go`
 * Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
     * That said, there could be Mars, Venus, and moon versions of this clock!
+* Geologic time is still being defined and further changes are expected in the coming years.
+
 
 ### To Do:
-* should geological time enumerations be scoped to the parent time unit? Currently they're treated as a flat list, which isn't how it works for nanoseconds.
+* geological time enumerations should be scoped to the parent time unit. Fix epoch and age.
+* should the Meghalayan age be softcoded/calculated in the reference implementation?
 * subepoch, subperiod support? 
 * picoseconds, microseconds, etc. support?
 * geological time element subunits vary based on the element; determine this representation
