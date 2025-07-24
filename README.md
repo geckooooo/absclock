@@ -97,17 +97,17 @@ The general format of Absolute Clock time is as follows:
 * `AG`: **Age.**
     * pre-Rhuddanian: `00`
     * Rhuddanian: `01` (first age of the Llandovery epoch)
-    * Aeronian
-    * Telychian
-    * Sheinwoodian
-    * Homerian
-    * Gorstian
-    * Ludfordian
+    * Aeronian: `02`
+    * Telychian: `03`
+    * Sheinwoodian: `04`
+    * Homerian: `05`
+    * Gorstian: `06`
+    * Ludfordian: `07`
     * ...
-    * Hettangian: `01`
-    * Danian: `01` (first age of the Paleocene epoch)
-    * Selandian: `02`
-    * Thanetian: `03`
+    * Hettangian: `nn`
+    * Danian: `nn` (first age of the Paleocene epoch)
+    * Selandian: `nn`
+    * Thanetian: `nn`
     * ...
     * Meghalayan `??` (the current age)
     * `??..n` (future ages)
