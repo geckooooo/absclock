@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:11:?:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:10:11:7:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -29,7 +29,7 @@ The general format of Absolute Clock time is as follows:
     * Archean: `2`
     * Proterozoic: `3`
     * Phanerozoic: `4` (the current eon)
-    * `5..n` (subsequent eons)
+    * `5..n` (future eons)
 * `ER`: **Era.**
     * pre-Eoarchean: `00` (covering the pre-Hadean and Hadean; neither have eras)
     * Eoarchean: `01`
@@ -42,7 +42,7 @@ The general format of Absolute Clock time is as follows:
     * Paleozoic: `08` (first era to be divided into geological periods)
     * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
-    * `11..n` (subsequent eras)
+    * `11..n` (future eras)
 * `PE`: **Period.**
     * Precambrian: `00` 
     * Cambrian: `01` (first period of the Paleozoic)
@@ -56,20 +56,22 @@ The general format of Absolute Clock time is as follows:
     * Paleogene: `09` (first period to be divided into geological epochs)
     * Neogene: `10`
     * Quaternary: `11` (the current period)
-    * `12..n` (subsequent periods)
+    * `12..n` (future periods)
 * `EP`: **Epoch.** 
-    * pre-Paleocene: `00`
-    * Paleocene: `01` (first epoch of the Paleogene)
-    * Eocene: `02`
-    * Eocene: `03`
-    * ...
-    * Holocene `??` (the current epoch)
-    * `??..n` (subsequent epochs)
+    * pre-Paleocene: `0`
+    * Paleocene: `1` (first epoch of the Paleogene)
+    * Eocene: `2`
+    * Oligocene: `3`
+    * Miocene: `4`
+    * Pliocene: `5`
+    * Pleistocene: `6`
+    * Holocene `7` (the current epoch)
+    * `8..n` (future epochs)
 * `AG`: **Age.**
     * pre-?: `00`
     * ...
     * Meghalayan `??` (the current age)
-    * `??..n` (subsequent ages)
+    * `??..n` (future ages)
 * `YYYY`: **Year.**
     * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. Conventionally 4 digits, but can be any length.
 * `MM`: **Month.** 01-12.
@@ -83,7 +85,7 @@ The general format of Absolute Clock time is as follows:
 ### More Examples
 The Absolute Clock 
 
-* Big Bang: `E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
+* Big Bang: `E:0:00:00:0:00:-13800000000:01:01:00:00:00:000:000000`
     * (this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
 
 
