@@ -3,7 +3,7 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:11:7:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+`E:4:10:12:32:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
 
 
 ### Problem Statement
@@ -12,8 +12,10 @@ Our default representation of time is goofy:
 * We use three different representations: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
+* There is currently no universal time system in use that goes back to the Big Bang.
+* There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
 
-The Absolute Clock rationalizes these different perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
+The Absolute Clock rationalizes these different incomnsistent and incomplerte perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
 
 ### Absolute Time Representation
@@ -25,7 +27,7 @@ The general format of Absolute Clock time is as follows:
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
     * pre-Hadean: `0` (Big Bang to the formation of Earth)
-    * Hadean: `1`
+    * Hadean: `1`  (first eon to be divided into geological eras)
     * Archean: `2`
     * Proterozoic: `3`
     * Phanerozoic: `4` (the current eon)
@@ -47,28 +49,65 @@ The general format of Absolute Clock time is as follows:
     * Precambrian: `00` 
     * Cambrian: `01` (first period of the Paleozoic)
     * Ordovician: `02`
-    * Silurian: `03`
+    * Silurian: `03` (first period to be divided into geological epochs)
     * Devonian: `04`
     * Carboniferous: `05` 
     * Permian:  `06`
     * Triassic: `07`
     * Jurassic: `08`
-    * Paleogene: `09` (first period to be divided into geological epochs)
-    * Neogene: `10`
-    * Quaternary: `11` (the current period)
-    * `12..n` (future periods)
+    * Cretaceous: `09`
+    * Paleogene: `10`
+    * Neogene: `11`
+    * Quaternary: `12` (the current period)
+    * `13..n` (future periods)
 * `EP`: **Epoch.** 
-    * pre-Paleocene: `0`
-    * Paleocene: `1` (first epoch of the Paleogene)
-    * Eocene: `2`
-    * Oligocene: `3`
-    * Miocene: `4`
-    * Pliocene: `5`
-    * Pleistocene: `6`
-    * Holocene `7` (the current epoch)
-    * `8..n` (future epochs)
+    * pre-Llandovery: `00`
+    * Llandovery: `01` (first epoch of the Silurian period)
+    * Wenlock:  `02`
+    * Ludlow: `03`
+    * Přídolí: `04` 
+    * Lochkovian: `05`
+    * Pragian: `06`
+    * Emsian: `07`
+    * Eifelian: `08`
+    * Givetian: `09`
+    * Frasnian: `10`
+    * Famennian: `11`
+    * Mississippian: `12`
+    * Pennsylvanian: `13`
+    * Cisuralian: `14`
+    * Guadalupian: `15`
+    * Lopingian: `16`
+    * Early Triassic: `17`
+    * Middle Triassic: `18`
+    * Late Triassic: `19`
+    * Early Jurassic: `20`
+    * Middle Jurassic: `21`
+    * Late Jurassic: `22`
+    * Early Cretaceous: `23`
+    * Late Cretaceous: `24`
+    * Paleocene: `25`
+    * Eocene: `26`
+    * Oligocene: `27`
+    * Miocene: `28`
+    * Pliocene: `29`
+    * Pleistocene: `30`
+    * Holocene `31` (the current epoch)
+    * `32..n` (future epochs)
 * `AG`: **Age.**
-    * pre-?: `00`
+    * pre-Rhuddanian: `00`
+    * Rhuddanian: `01` (first age of the Llandovery epoch)
+    * Aeronian
+    * Telychian
+    * Sheinwoodian
+    * Homerian
+    * Gorstian
+    * Ludfordian
+    * ...
+    * Hettangian: `01`
+    * Danian: `01` (first age of the Paleocene epoch)
+    * Selandian: `02`
+    * Thanetian: `03`
     * ...
     * Meghalayan `??` (the current age)
     * `??..n` (future ages)
@@ -82,11 +121,11 @@ The general format of Absolute Clock time is as follows:
 * `MSS`: **Millisecond.** 000-999. (1s = 1000ms.)
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
-### More Examples
-The Absolute Clock 
+### More Absolute Time Examples
 
-* Big Bang: `E:0:00:00:0:00:-13800000000:01:01:00:00:00:000:000000`
-    * (this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
+* Big Bang: `E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
+    * (this assumes the Big Bang started exactly 13.8 billion years ago.)
+* Declaration of Independence: 
 
 
 ### TL;DR
@@ -94,11 +133,12 @@ To get the current absolute time: `% go run absclock.go`
 
 
 ### Notes
-* Time is represented in Zulu time.
+* Time is represented in UTC.
+* Only works on Earth pending implementation of consistent geological time primitives across multiple planets or moons. Currently other planets and satellites (like Mars, Venus, and the moon) have their own specific geological time.
 * Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
-* Only works on Earth pending implementation of timezones on other planets or moons. Till then UTC is good enough.
+* Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
     * That said, there could be Mars, Venus, and moon versions of this clock!
 
@@ -107,4 +147,5 @@ To get the current absolute time: `% go run absclock.go`
 * picoseconds, microseconds, etc. support?
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
-* Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE)
+* Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
+* Relate to the ISO 8601 time format
