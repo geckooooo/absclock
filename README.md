@@ -22,7 +22,7 @@ The Absolute Clock rationalizes these different inconsistent and incomplete pers
 
 The general format of Absolute Clock time is as follows:
 
-`E:O:R:PE:EP:AG:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
+`E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
 * `E`: **Eternity.** The scope of all time. This is an invariant `E`.
 * `O`: **Eon.**
@@ -45,7 +45,7 @@ The general format of Absolute Clock time is as follows:
     * Mesozoic: `2`
     * Cenozoic: `3` (the current era)
     * `1..n` (first era of a future eon)
-* `PE`: **Period.**
+* `P`: **Period.**
     * Precambrian: `0` 
     * Cambrian: `1` (first period of the Paleozoic)
     * Ordovician: `2`
@@ -60,7 +60,7 @@ The general format of Absolute Clock time is as follows:
     * Neogene: `2`
     * Quaternary: `3` (the current period)
     * `1..n` (first period of a future era)
-* `EP`: **Epoch.** 
+* `C`: **Epoch.** 
     * pre-Llandovery: `0`
     * Llandovery: `1` (first epoch of the Silurian period)
     * Wenlock: `2`
@@ -91,7 +91,7 @@ The general format of Absolute Clock time is as follows:
     * Pleistocene: `1` (first epoch of the Carboniferous period)
     * Holocene `2` (the current epoch)
     * `1..n` (first epoch of a future period)
-* `AG`: **Age.**
+* `A`: **Age.**
     * pre-Rhuddanian: `0`
     * Rhuddanian: `1` (first age of the Llandovery epoch)
     * Aeronian: `2`
@@ -126,7 +126,7 @@ The general format of Absolute Clock time is as follows:
     * Meghalayan `3` (the current age)
     * `1..n` (first age of a future epoch)
 * `YYYY`: **Year.**
-    * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. Conventionally 4 digits, but can be any length.
+    * Common Era notation. Negative numbers represent BCE (e.g. `-500` is 500 BCE). There is no `0` value for either BCE or CE. This field is conventionally 4 digits for current dates but can be any length.
 * `MM`: **Month.** 01-12.
 * `DD`: **Day.** 01-31.
 * `HH`: **Hour.** 24-hour format. 00-23.
@@ -138,18 +138,22 @@ The general format of Absolute Clock time is as follows:
 
 ### Notation Variations
 
-the first portion of the string prior to the year--from eternity to age, `E:4:3:3:2:3`--isn't likely to be relevant on a day to day basis for most people and can be omitted for practicality. The notation for ignoring unwanted larger time units on the left (for example, leaving only year to nanoseconds) is:
+the first portion of the string prior to the year--from eternity to age, `E:4:3:3:2:3:`--isn't likely to be relevant on a day to day basis for most people and can be omitted for practicality. The notation for ignoring unwanted larger time units on the left (for example, leaving only year to nanoseconds) is:
 
 `YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
 To ignore smaller units, say for rounding to the second, simply truncate them the same way from the right:
 
-`E:O:R:PE:EP:AG:YYYY:MM:DD:HH:MM:SS`
+`E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS`
+
+And of couse you can truncate from both ends at once:
+
+`YYYY:MM:DD:HH:MM`
 
 
 ### More Absolute Time Examples
 
-* Big Bang: `E:0:0:00:00:00:-13800000000:01:01:00:00:00:000:000000`
+* Big Bang: `E:0:0:0:0:0:-13800000000:01:01:00:00:00:000:000000`
     * (this assumes the Big Bang started exactly 13.8 billion years ago.)
 * Declaration of Independence: 
 
