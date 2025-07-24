@@ -75,13 +75,13 @@ The general format of Absolute Clock time is as follows:
     * Cisuralian: `n`
     * Guadalupian: `n`
     * Lopingian: `n`
-    * Early Triassic: `1`
+    * Early Triassic: `1` (first epoch of the Triassic period)
     * Middle Triassic: `1`
     * Late Triassic: `3`
-    * Early Jurassic: `1`
+    * Early Jurassic: `1` (first epoch of the Jurassic period)
     * Middle Jurassic: `2`
     * Late Jurassic: `3`
-    * Early Cretaceous: `1`
+    * Early Cretaceous: `1` (first epoch of the Cretaceous period)
     * Late Cretaceous: `2`
     * Paleocene: `n`
     * Eocene: `n`
