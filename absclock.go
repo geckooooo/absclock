@@ -1,3 +1,5 @@
+// Reference implementation of the Absolute Clock:
+// A clock that represents a single moment in time as a unique string.
 package main
 
 import (

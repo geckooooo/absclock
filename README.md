@@ -3,7 +3,17 @@
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
-`E:4:10:11:?:?:2025:07:23:09:28:15:042:654321`
+`E:4:10:11:?:?:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+
+
+### Problem Statement
+
+Our default representation of time is goofy:
+* We use three different representations: clock time, calendar time, geological time.
+* They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
+* As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
+
+The Absolute Clock rationalizes these different perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
 
 ### Absolute Time Representation
@@ -29,7 +39,7 @@ The general format of Absolute Clock time is as follows:
     * Paleoproterozoic: `05`
     * Mesoproterozoic: `06`
     * Neoproterozoic: `07`
-    * Paleozoic: `08` (first era to be broken out into geological periods)
+    * Paleozoic: `08` (first era to be divided into geological periods)
     * Mesozoic: `09`
     * Cenozoic: `10` (the current era)
     * `11..n` (subsequent eras)
@@ -43,12 +53,15 @@ The general format of Absolute Clock time is as follows:
     * Permian:  `06`
     * Triassic: `07`
     * Jurassic: `08`
-    * Paleogene: `09`
+    * Paleogene: `09` (first period to be divided into geological epochs)
     * Neogene: `10`
     * Quaternary: `11` (the current period)
     * `12..n` (subsequent periods)
 * `EP`: **Epoch.** 
-    * pre-?: `00`
+    * pre-Paleocene: `00`
+    * Paleocene: `01` (first epoch of the Paleogene)
+    * Eocene: `02`
+    * Eocene: `03`
     * ...
     * Holocene `??` (the current epoch)
     * `??..n` (subsequent epochs)
@@ -68,12 +81,10 @@ The general format of Absolute Clock time is as follows:
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
 ### More Examples
+The Absolute Clock 
 
-This is the absolute time of the Big Bang:
-
-`E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
-
-(this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
+* Big Bang: `E:0:00:00:00:00:-13800000000:01:01:00:00:00:000:000000`
+    * (this assumes the Big Bang started 13.8 billion years ago on January 1st of that year.)
 
 
 ### TL;DR
@@ -94,3 +105,4 @@ To get the current absolute time: `% go run absclock.go`
 * picoseconds, microseconds, etc. support?
 * geological time element subunits vary based on the element; determine this representation
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
+* Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE)
