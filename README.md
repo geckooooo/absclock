@@ -41,7 +41,7 @@ The general format of Absolute Clock time is as follows:
     * Paleoproterozoic: `1` (first era of the Proterozoic eon. first to be divided into geological periods)
     * Mesoproterozoic: `2`
     * Neoproterozoic: `3`
-    * Paleozoic: `1` (first Phanerozoic era)
+    * Paleozoic: `1` (first era of the Phanerozoic eon)
     * Mesozoic: `2`
     * Cenozoic: `3` (the current era)
     * `1..n` (first era of a future eon)
@@ -57,16 +57,16 @@ The general format of Absolute Clock time is as follows:
     * Tonian: `1` (first period of the Neoproterozoic era)
     * Cryogenian: `2`
     * Ediacaran: `3`
-    * Cambrian: `1` (first period of the Paleozoic. first to be divided into geological epochs)
+    * Cambrian: `1` (first period of the Paleozoic era. first to be divided into geological epochs)
     * Ordovician: `2`
     * Silurian: `3`
     * Devonian: `4`
     * Carboniferous: `5` 
     * Permian:  `6`
-    * Triassic: `1` (first period of the Mesozoic)
+    * Triassic: `1` (first period of the Mesozoic era)
     * Jurassic: `2`
     * Cretaceous: `3`
-    * Paleogene: `1` (first period of the Cenozoic)
+    * Paleogene: `1` (first period of the Cenozoic era)
     * Neogene: `2`
     * Quaternary: `3` (the current period)
     * `1..n` (first period of a future era)
@@ -183,7 +183,7 @@ Setting a field to `.` (as above) explicitly states "can be any legal value" In 
 
 Durations can be expressed with dashes (`-`) between two values in a field. For example:
 
-`E:O:R:P:C:A:2025:12:25:16-21`
+`E:4:3:3:2:3:2025:12:25:16-21`
 
 This expresses an event happening on Chrismas 2025 at 4-9pm (perhaps Christmas dinner).
 
@@ -215,7 +215,8 @@ To get the current absolute time: `% go run absclock.go`
 
 
 ### To Do:
-* geological time enumerations should be scoped to the parent time unit. Fix epoch and age.
+
+* geological time enumerations should be scoped to the parent time unit. Fix age.
 * should the Meghalayan age be softcoded/calculated in the reference implementation?
 * consider subepoch, subperiod support
 * consider picoseconds, microseconds, etc. support
@@ -226,4 +227,5 @@ To get the current absolute time: `% go run absclock.go`
 * how to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Specify timezone? (as arbitrary string appended to the hour or minute?)
+* Consider changing the nanosecond field to "subsecond" with arbitrary resolution
 
