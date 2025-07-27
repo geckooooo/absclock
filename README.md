@@ -1,4 +1,5 @@
 # The Absolute Clock
+A new way to represent time
 
 ### Overview
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
@@ -73,7 +74,7 @@ The general format of Absolute Clock time is as follows:
     * `1..n` (first period of a future era)
 * `C`: **Epoch.** 
     * pre-Terreneuvian: `0`
-    * Terreneuvian: `1` (first epoch of the Cambrian period)
+    * Terreneuvian: `1` (first epoch of the Cambrian period. first to be divided into geological ages)
     * Cambrian Series 2: `2` (epoch yet to be named)
     * Miaolingian: `3`
     * Furongian: `4`
@@ -109,7 +110,11 @@ The general format of Absolute Clock time is as follows:
     * Holocene `2` (the current epoch)
     * `1..n` (first epoch of a future period)
 * `A`: **Age.**
-    * pre-?: `0`
+    * pre-Fortunian: `0`
+    * Fortunian: `1` (first age of the Terreneuvian epoch)
+    * Stage 2: `2` (age yet to be named)
+    * Stage 3: `3`
+    * Stage 4: `4`
     * ...
     * Rhuddanian: `1` (first age of the Llandovery epoch)
     * Aeronian: `2`
@@ -229,5 +234,5 @@ To get the current absolute time: `% go run absclock.go`
 * How to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
-* Consider changing the nanosecond field to "subsecond" with arbitrary resolution
+* Consider changing the nanosecond field to "subsecond" with arbitrary precision
 
