@@ -71,24 +71,23 @@ The general format of Absolute Clock time is as follows:
     * Late Devonian: `3`
     * Mississippian: `1` (first epoch of the Carboniferous period)
     * Pennsylvanian: `2`
-    * ...
-    * Cisuralian: `n`
-    * Guadalupian: `n`
-    * Lopingian: `n`
+    * Cisuralian: `1` (first epoch of the Permian period)
+    * Guadalupian: `2`
+    * Lopingian: `3`
     * Early Triassic: `1` (first epoch of the Triassic period)
-    * Middle Triassic: `1`
+    * Middle Triassic: `2`
     * Late Triassic: `3`
     * Early Jurassic: `1` (first epoch of the Jurassic period)
     * Middle Jurassic: `2`
     * Late Jurassic: `3`
     * Early Cretaceous: `1` (first epoch of the Cretaceous period)
     * Late Cretaceous: `2`
-    * Paleocene: `n`
-    * Eocene: `n`
-    * Oligocene: `n`
-    * Miocene: `n`
-    * Pliocene: `n`
-    * Pleistocene: `1` (first epoch of the Carboniferous period)
+    * Paleocene: `1` (first epoch of the Paleogene period)
+    * Eocene: `2`
+    * Oligocene: `3`
+    * Miocene: `1` (first epoch of the Neogene period)
+    * Pliocene: `2`
+    * Pleistocene: `1` (first epoch of the Quaternary period)
     * Holocene `2` (the current epoch)
     * `1..n` (first epoch of a future period)
 * `A`: **Age.**
