@@ -71,13 +71,14 @@ The general format of Absolute Clock time is as follows:
     * Quaternary: `3` (the current period)
     * `1..n` (first period of a future era)
 * `C`: **Epoch.** 
-    * pre-Llandovery: `0`
-    * ...
+    * pre-Terreneuvian: `0`
     * Terreneuvian: `1` (first epoch of the Cambrian period)
-    * Cambrian Series 2: `2`
+    * Cambrian Series 2: `2` (yet to be named period)
     * Miaolingian: `3`
     * Furongian: `4`
-    * ?: `1` (first epoch of the Ordovician period)
+    * Early Ordovician: `1` (first epoch of the Ordovician period)
+    * Middle Ordovician: `2`
+    * Late Ordovician: `3`
     * ...
     * Llandovery: `1` (first epoch of the Silurian period)
     * Wenlock: `2`
@@ -173,11 +174,12 @@ And of couse you can truncate from both ends at once:
 
 #### Dot Notation
 
-If you want to indicate units to leave unspecified or that can be ignored, you can use the dot notation:
+If you want to indicate units to leave explicitly unspecified or that can be ignored, you can use the dot notation:
 
 `E:O:R:P:C:A:YYYY:.:DD:HH:.:.:.:.`
 
 Setting a field to `.` (as above) explicitly states "don't worry about this value." In this example, this use of dot notation could express an absolute time for an event that occurs at a specific hour every day.
+
 
 ### More Absolute Time Examples
 
