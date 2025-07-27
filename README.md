@@ -38,18 +38,28 @@ The general format of Absolute Clock time is as follows:
     * Paleoarchean: `2`
     * Mesoarchean: `3`
     * Neoarchean: `4`
-    * Paleoproterozoic: `1` (first era of the Proterozoic eon)
+    * Paleoproterozoic: `1` (first era of the Proterozoic eon. first to be divided into geological periods)
     * Mesoproterozoic: `2`
     * Neoproterozoic: `3`
-    * Paleozoic: `1` (first Phanerozoic era, first to be divided into geological periods)
+    * Paleozoic: `1` (first Phanerozoic era)
     * Mesozoic: `2`
     * Cenozoic: `3` (the current era)
     * `1..n` (first era of a future eon)
 * `P`: **Period.**
-    * Precambrian: `0` 
-    * Cambrian: `1` (first period of the Paleozoic)
+    * pre-Siderian: `0` 
+    * Siderian: `1` (first period of the Paleoproterozoic era)
+    * Rhyacian: `2`
+    * Orosirian: `3`
+    * Statherian: `4`
+    * Calymmian: `1` (first period of the Mesoproterozoic era)
+    * Ectasian: `2`
+    * Stenian: `3`
+    * Tonian: `1` (first period of the Neoproterozoic era)
+    * Cryogenian: `2`
+    * Ediacaran: `3`
+    * Cambrian: `1` (first period of the Paleozoic. first to be divided into geological epochs)
     * Ordovician: `2`
-    * Silurian: `3` (first period to be divided into geological epochs)
+    * Silurian: `3`
     * Devonian: `4`
     * Carboniferous: `5` 
     * Permian:  `6`
@@ -62,10 +72,17 @@ The general format of Absolute Clock time is as follows:
     * `1..n` (first period of a future era)
 * `C`: **Epoch.** 
     * pre-Llandovery: `0`
+    * ...
+    * Terreneuvian: `1` (first epoch of the Cambrian period)
+    * Cambrian Series 2: `2`
+    * Miaolingian: `3`
+    * Furongian: `4`
+    * ?: `1` (first epoch of the Ordovician period)
+    * ...
     * Llandovery: `1` (first epoch of the Silurian period)
     * Wenlock: `2`
     * Ludlow: `3`
-    * Přídolí: `1` (has no ages) 
+    * Přídolí: `4` (has no ages) 
     * Early Devonian: `1` (first epoch of the Devonian period)
     * Middle Devonian: `2`
     * Late Devonian: `3`
@@ -107,6 +124,9 @@ The general format of Absolute Clock time is as follows:
     * Frasnian: `1` (first age of the Late Devonian epoch)
     * Famennian: `2`
     * Tournaisian: `1` (first age of the Mississippian epoch)
+    * Visean: `2`
+    * Serpukhovian: `3`
+
     * ...
     * Lower Lochkovian: `1` (first age of the Lochkovian epoch)
     * Middle Lochkovian: `2`
@@ -193,4 +213,5 @@ To get the current absolute time: `% go run absclock.go`
 * Relate to the ISO 8601 time format
 * how to represent the absence of any ages for the Přídolí epoch. An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
+* Add dash notation for durations (e.g. using `14-15` for `HH` indicating a one hour duration at 2pm)
 
