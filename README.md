@@ -130,6 +130,11 @@ The general format of Absolute Clock time is as follows:
     * Gorstian: `1` (first age of the Ludlow epoch)
     * Ludfordian: `2`
     * Lochkovian: `1` (first age of the Early Devonian epoch)
+    * ...
+    * ???Lower Lochkovian: `1` (first age of the Lochkovian epoch)
+    * ???Middle Lochkovian: `2`
+    * ???Upper Lochkovian: `3`
+    * ...
     * Pragian: `2`
     * Emsian: `3`
     * Eifelian: `1` (first age of the Middle Devonian epoch)
@@ -140,9 +145,13 @@ The general format of Absolute Clock time is as follows:
     * Visean: `2`
     * Serpukhovian: `3`
     * ...
-    * Lower Lochkovian: `1` (first age of the Lochkovian epoch)
-    * Middle Lochkovian: `2`
-    * Upper Lochkovian: `3`
+    * ?: `1` (first age of the Pennsylvanian epoch)
+    * ?: `1` (first age of the Cisuralian epoch)
+    * ?: `1` (first age of the Guadalupian epoch)
+    * ?: `1` (first age of the Lopingian epoch)
+    * ?: `1` (first age of the Early Triassic epoch)
+    * ?: `1` (first age of the Middle Triassic epoch)
+    * ?: `1` (first age of the Late Triassic epoch)
     * ...
     * Hettangian: `n`
     * Danian: `n` (first age of the Paleocene epoch)
@@ -241,4 +250,5 @@ To get the current absolute time: `% go run absclock.go`
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision
+* Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
 
