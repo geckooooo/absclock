@@ -171,13 +171,21 @@ And of couse you can truncate from both ends at once:
 
 `YYYY:MM:DD:HH:MM`
 
-#### Dot Notation
+#### Wildcards
 
-If you want to indicate units to leave explicitly unspecified or that can be ignored, you can use the dot notation:
+Dots (`.`) can be used as wildcards for individual fields. If you want to indicate units to leave explicitly unspecified or that can be ignored, you can use the dot notation like this:
 
-`E:O:R:P:C:A:YYYY:.:DD:HH:.:.:.:.`
+`E:O:R:P:C:A:YYYY:.:.:HH:.:.:.:.`
 
-Setting a field to `.` (as above) explicitly states "don't worry about this value." In this example, this use of dot notation could express an absolute time for an event that occurs at a specific hour every day.
+Setting a field to `.` (as above) explicitly states "can be any legal value" In this example, this use of dot notation could express an absolute time for an event that occurs at a specific hour every day for a specific year.
+
+#### Durations
+
+Durations can be expressed with dashes ('-') between two values in a field. For example:
+
+`E:O:R:P:C:A:2025:12:25:16-21`
+
+This expresses an event happening on Chrismas 2025 at 4-9pm (perhaps Christmas dinner).
 
 
 ### More Absolute Time Examples
@@ -217,6 +225,5 @@ To get the current absolute time: `% go run absclock.go`
 * Relate to the ISO 8601 time format
 * how to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
-* Add dash notation for durations (e.g. using `14-15` for `HH` indicating a one hour duration at 2pm)
 * Specify timezone? (as arbitrary string appended to the hour or minute?)
 
