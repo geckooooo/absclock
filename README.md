@@ -157,6 +157,8 @@ The general format of Absolute Clock time is as follows:
 
 ### Notation Variations
 
+#### Truncation
+
 the first portion of the string prior to the year--from eternity to age, `E:4:3:3:2:3:`--isn't likely to be relevant on a day to day basis for most people and can be omitted for practicality. The notation for ignoring unwanted larger time units on the left (for example, leaving only year to nanoseconds) is:
 
 `YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
@@ -169,7 +171,9 @@ And of couse you can truncate from both ends at once:
 
 `YYYY:MM:DD:HH:MM`
 
-If you want to indicate units to leave unspecified, or that aren't relevant to its usage, use the dot notation:
+#### Dot Notation
+
+If you want to indicate units to leave unspecified or that can be ignored, you can use the dot notation:
 
 `E:O:R:P:C:A:YYYY:.:DD:HH:.:.:.:.`
 
@@ -177,9 +181,8 @@ Setting a field to `.` (as above) explicitly states "don't worry about this valu
 
 ### More Absolute Time Examples
 
-* Big Bang: `E:0:0:0:0:0:-13800000000:01:01:00:00:00:000:000000`
-    * (this assumes the Big Bang started exactly 13.8 billion years ago.)
-* Declaration of Independence: 
+* Big Bang: `E:0:0:0:0:0:-13800000000:.:.:.:.:.:.:.` (assumes the Big Bang started 13.8 billion years ago)
+* Declaration of Independence: `E:4:3:3:2:3:1776:07:04` (July 4th, 1776)
 
 
 ### Reference Implementation
