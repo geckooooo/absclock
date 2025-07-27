@@ -8,12 +8,13 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 
 ### Problem Statement
 
-The normal way we express time is goofy:
+The normal way we express time is janky:
 * We use three different representations: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
 * There is currently no universal time system in use that goes back to the Big Bang.
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
+* It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation ("repeats weekly").
 
 The Absolute Clock rationalizes these different inconsistent and incomplete perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
@@ -185,7 +186,7 @@ Durations can be expressed with dashes (`-`) between two values in a field. For 
 
 `E:4:3:3:2:3:2025:12:25:16-21`
 
-This expresses an event happening on Chrismas 2025 at 4-9pm (perhaps Christmas dinner).
+This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas dinner).
 
 
 ### More Absolute Time Examples
@@ -225,8 +226,8 @@ To get the current absolute time: `% go run absclock.go`
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
-* how to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
+* How to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
-* Specify timezone? (as arbitrary string appended to the hour or minute?)
+* Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary resolution
 
