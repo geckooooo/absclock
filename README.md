@@ -73,13 +73,12 @@ The general format of Absolute Clock time is as follows:
 * `C`: **Epoch.** 
     * pre-Terreneuvian: `0`
     * Terreneuvian: `1` (first epoch of the Cambrian period)
-    * Cambrian Series 2: `2` (yet to be named period)
+    * Cambrian Series 2: `2` (epoch yet to be named)
     * Miaolingian: `3`
     * Furongian: `4`
     * Early Ordovician: `1` (first epoch of the Ordovician period)
     * Middle Ordovician: `2`
     * Late Ordovician: `3`
-    * ...
     * Llandovery: `1` (first epoch of the Silurian period)
     * Wenlock: `2`
     * Ludlow: `3`
@@ -109,7 +108,8 @@ The general format of Absolute Clock time is as follows:
     * Holocene `2` (the current epoch)
     * `1..n` (first epoch of a future period)
 * `A`: **Age.**
-    * pre-Rhuddanian: `0`
+    * pre-?: `0`
+    * ...
     * Rhuddanian: `1` (first age of the Llandovery epoch)
     * Aeronian: `2`
     * Telychian: `3`
@@ -127,7 +127,6 @@ The general format of Absolute Clock time is as follows:
     * Tournaisian: `1` (first age of the Mississippian epoch)
     * Visean: `2`
     * Serpukhovian: `3`
-
     * ...
     * Lower Lochkovian: `1` (first age of the Lochkovian epoch)
     * Middle Lochkovian: `2`
@@ -164,9 +163,9 @@ the first portion of the string prior to the year--from eternity to age, `E:4:3:
 
 `YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
-To ignore smaller units, say for rounding to the second, simply truncate them the same way from the right:
+To ignore smaller units, say for rounding to the minute, simply truncate them the same way from the right:
 
-`E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS`
+`E:O:R:P:C:A:YYYY:MM:DD:HH:MM`
 
 And of couse you can truncate from both ends at once:
 
@@ -216,7 +215,8 @@ To get the current absolute time: `% go run absclock.go`
 * Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
-* how to represent the absence of any ages for the Přídolí epoch. An age of `0` indicates the time before the first age.
+* how to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Add dash notation for durations (e.g. using `14-15` for `HH` indicating a one hour duration at 2pm)
+* Specify timezone? (as arbitrary string appended to the hour or minute?)
 
