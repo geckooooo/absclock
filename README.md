@@ -149,6 +149,11 @@ And of couse you can truncate from both ends at once:
 
 `YYYY:MM:DD:HH:MM`
 
+If you want to indicate units to leave unspecified, or that aren't relevant to its usage, use the dot notation:
+
+`E:O:R:P:C:A:YYYY:.:DD:HH:.:.:.:.`
+
+Setting a field to `.` (as above) explicitly states "don't worry about this value." In this example, this use of dot notation could express an absolute time for an event that occurs at a specific hour every day.
 
 ### More Absolute Time Examples
 
