@@ -190,8 +190,9 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (perhaps Christmas d
 
 ### More Absolute Time Examples
 
-* Big Bang: `E:0:0:0:0:0:-13800000000` (assumes the Big Bang started 13.8 billion years ago)
+* Big Bang: `E:0:0:0:0:0:-13800000000` (13.8 billion years ago)
 * Declaration of Independence: `E:4:3:3:2:3:1776:07:04` (July 4th, 1776)
+* The Hundred Years' War: `E:4:3:3:2:3:1337-1453` (1337–1453 CE)
 
 
 ### Reference Implementation
