@@ -113,8 +113,14 @@ The general format of Absolute Clock time is as follows:
     * pre-Fortunian: `0`
     * Fortunian: `1` (first age of the Terreneuvian epoch)
     * Stage 2: `2` (age yet to be named)
-    * Stage 3: `3`
-    * Stage 4: `4`
+    * Stage 3: `1` (first age of the Cambrian Series 2 epoch)
+    * Stage 4: `2`
+    * ...
+    * ?: `1` (first age of the Miaolingian epoch)
+    * ?: `1` (first age of the Furongian epoch)
+    * ?: `1` (first age of the Early Ordovician epoch)
+    * ?: `1` (first age of the Middle Ordovician epoch)
+    * ?: `1` (first age of the Late Ordovician epoch)
     * ...
     * Rhuddanian: `1` (first age of the Llandovery epoch)
     * Aeronian: `2`
