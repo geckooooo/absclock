@@ -8,7 +8,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 
 ### Problem Statement
 
-Our default representation of time is goofy:
+The normal way we express time is goofy:
 * We use three different representations: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
@@ -181,7 +181,7 @@ Setting a field to `.` (as above) explicitly states "can be any legal value" In 
 
 #### Durations
 
-Durations can be expressed with dashes ('-') between two values in a field. For example:
+Durations can be expressed with dashes (`-`) between two values in a field. For example:
 
 `E:O:R:P:C:A:2025:12:25:16-21`
 
@@ -190,7 +190,7 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (perhaps Christmas d
 
 ### More Absolute Time Examples
 
-* Big Bang: `E:0:0:0:0:0:-13800000000:.:.:.:.:.:.:.` (assumes the Big Bang started 13.8 billion years ago)
+* Big Bang: `E:0:0:0:0:0:-13800000000` (assumes the Big Bang started 13.8 billion years ago)
 * Declaration of Independence: `E:4:3:3:2:3:1776:07:04` (July 4th, 1776)
 
 
