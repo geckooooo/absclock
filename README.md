@@ -216,9 +216,9 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas din
 
 ### Absolute Time and Relativity
 
-The Absolute Clock is compatible with relativistic time. A string identifies an event *t*. 
+The Absolute Clock is compatible with relativistic time. A unique string identifies an event *t*. That may seem to imply an absolute frame of reference, which doesn't exist. However, if two observers perceived an event differently, absolute time can have two separate values in the same representation--in other words, two different strings for the two different observers can reference the same event.
 
-(explain how a single event (represented as an absolute time string) works with relativity, e.g. two observers with separate frames of reference.)
+(give a simple example.)
 
 > [!NOTE]
 > Spacetime *(t, x, y, z)* is not represented formally here.
