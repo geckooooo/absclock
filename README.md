@@ -18,7 +18,7 @@ The normal way we express time is janky:
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
 * It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation ("repeats weekly").
 
-What's missing is a way of expressing time in a way that deeply connects to the cosmos, which ultimately is the scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
+What's missing is a way of expressing time in a way that deeply connects to the cosmos--which ultimately is the true scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
 
 ### Absolute Time Representation
@@ -177,15 +177,32 @@ The general format of Absolute Clock time is as follows:
     * Oxfordian: `1` (first age of the Late Jurassic epoch)
     * Kimmeridgian: `2`
     * Tithonian: `3`
+    * Berriasian: `1` (first age of the Early Cretaceous epoch)
+    * Valanginian: `2`
+    * Hauterivian: `3`
+    * Barremian: `4`
+    * Aptian: `5`
+    * Albian: `6`
+    * Cenomanian: `1` (first age of the Late Cretaceous epoch)
+    * Turonian: `2`
+    * Coniacian: `3`
+    * Santonian: `4`
+    * Campanian: `5`
+    * Maastrichtian: `6`
+    * Danian: `1` (first age of the Paleocene epoch)
+    * Selandian: `2`
+    * Thanetian: `3`
+    * Ypresian: `1` (first age of the Eocene)
+    * Lutetian: `2`
+    * Bartonian: `3`
+    * Priabonian: `4`
     * ...
-    * ?: `1` (first age of the Early Cretaceous epoch)
+    * ?: `1` (first age of the Oligocene)
     * ?: `n`
-    * ?: `1` (first age of the Late Cretaceous epoch)
+    * ?: `1` (first age of the Miocene)
     * ?: `n`
-    * ...
-    * Danian: `n` (first age of the Paleocene epoch)
-    * Selandian: `n`
-    * Thanetian: `n`
+    * ?: `1` (first age of the Pliocene)
+    * ?: `n`
     * ...
     * Gelasian: `1` (first age of the Pleistocene)
     * Calabrian: `2`
@@ -244,7 +261,7 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas din
 
 ### Absolute Time and Relativity
 
-The Absolute Clock is compatible with relativistic spacetime. A unique literal string identifies an event *t*. That may seem to imply an absolute frame of reference, which doesn't exist. However, if two observers perceived an event differently, absolute time can have two separate values in the same representation--in other words, two different strings for the two different observers can reference the same event.
+The Absolute Clock is compatible with relativistic spacetime. A unique literal string identifies an event *t*. That may seem to imply an absolute frame of reference, which (per Einstein) doesn't exist. However, if two observers perceived a the chronology of an event differently, absolute time can have two separate values in the same schema--in other words, two different strings for the two different observers can reference the same event.
 
 (give a simple example.)
 
