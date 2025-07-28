@@ -211,6 +211,10 @@ Dots (`.`) can be used as wildcards for individual fields. If you want to indica
 
 Setting a field to `.` (as above) explicitly states "can be any legal value" In this example, this use of dot notation could express an absolute time for an event that occurs at a specific hour every day for a specific year.
 
+> [!NOTE]
+> Dot notation is used in the special case of Přídolí epoch, which has no ages. When referring to that epoch, use `.` for the age.
+
+
 #### Durations
 
 Durations can be expressed with dashes (`-`) between two values in a field. For example:
@@ -267,7 +271,6 @@ To get the current absolute time: `% go run absclock.go`
 * geological time element subunits vary based on the element; determine this representation
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
-* How to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
