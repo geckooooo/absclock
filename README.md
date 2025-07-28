@@ -10,6 +10,7 @@ The Absolute Clock represents a single unique moment or event since the dawn of 
 ### Problem Statement
 
 The normal way we express time is janky:
+
 * We use three different representations: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
@@ -17,7 +18,7 @@ The normal way we express time is janky:
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
 * It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation ("repeats weekly").
 
-The Absolute Clock rationalizes these different inconsistent and incomplete perspectives into a single, coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
+What's missing is a way of expressing time in a way that deeply connects to the cosmos, which ultimately is the scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
 
 ### Absolute Time Representation
@@ -136,11 +137,6 @@ The general format of Absolute Clock time is as follows:
     * Gorstian: `1` (first age of the Ludlow epoch)
     * Ludfordian: `2`
     * Lochkovian: `1` (first age of the Early Devonian epoch)
-    * ...
-    * ???Lower Lochkovian: `1` (first age of the Lochkovian epoch)
-    * ???Middle Lochkovian: `2`
-    * ???Upper Lochkovian: `3`
-    * ...
     * Pragian: `2`
     * Emsian: `3`
     * Eifelian: `1` (first age of the Middle Devonian epoch)
@@ -150,21 +146,43 @@ The general format of Absolute Clock time is as follows:
     * Tournaisian: `1` (first age of the Mississippian epoch)
     * Visean: `2`
     * Serpukhovian: `3`
+    * Bashkirian: `1` (first age of the Pennsylvanian epoch)
+    * Moscovian: `2`
+    * Kasimovian: `3`
+    * Gzhelian: `4`
+    * Asselian: `1` (first age of the Cisuralian epoch)
+    * Sakmarian: `2`
+    * Artinskian: `3`
+    * Kungurian: `4`
+    * Roadian: `1` (first age of the Guadalupian epoch)
+    * Wordian: `2`
+    * Capitanian: `3`
+    * Wuchiapingian: `1` (first age of the Lopingian epoch)
+    * Changhsingian: `2`
+    * Induan: `1` (first age of the Early Triassic epoch)
+    * Olenekian: `2`
+    * Anisian: `1` (first age of the Middle Triassic epoch)
+    * Ladinian: `2`
+    * Carnian: `1` (first age of the Late Triassic epoch)
+    * Norian: `2`
+    * Rhaetian: `3`
+    * Hettangian: `1` (first age of the Early Jurassic epoch)
+    * Sinemurian: `2`
+    * Pliensbachian: `3`
+    * Toarcian: `4`
+    * Aalenian: `1` (first age of the Middle Jurassic epoch)
+    * Bajocian: `2`
+    * Bathonian: `3`
+    * Callovian: `4`
+    * Oxfordian: `1` (first age of the Late Jurassic epoch)
+    * Kimmeridgian: `2`
+    * Tithonian: `3`
     * ...
-    * ?: `1` (first age of the Pennsylvanian epoch)
-    * ?: `1` (first age of the Cisuralian epoch)
-    * ?: `1` (first age of the Guadalupian epoch)
-    * ?: `1` (first age of the Lopingian epoch)
-    * ?: `1` (first age of the Early Triassic epoch)
-    * ?: `1` (first age of the Middle Triassic epoch)
-    * ?: `1` (first age of the Late Triassic epoch)
-    * ?: `1` (first age of the Early Jurassic epoch)
-    * ?: `1` (first age of the Middle Jurassic epoch)
-    * ?: `1` (first age of the Late Jurassic epoch)
     * ?: `1` (first age of the Early Cretaceous epoch)
+    * ?: `n`
     * ?: `1` (first age of the Late Cretaceous epoch)
+    * ?: `n`
     * ...
-    * Hettangian: `n`
     * Danian: `n` (first age of the Paleocene epoch)
     * Selandian: `n`
     * Thanetian: `n`
