@@ -216,14 +216,14 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas din
 
 ### Absolute Time and Relativity
 
-The Absolute Clock is compatible with relativistic time. A unique string identifies an event *t*. That may seem to imply an absolute frame of reference, which doesn't exist. However, if two observers perceived an event differently, absolute time can have two separate values in the same representation--in other words, two different strings for the two different observers can reference the same event.
+The Absolute Clock is compatible with relativistic spacetime. A unique literal string identifies an event *t*. That may seem to imply an absolute frame of reference, which doesn't exist. However, if two observers perceived an event differently, absolute time can have two separate values in the same representation--in other words, two different strings for the two different observers can reference the same event.
 
 (give a simple example.)
 
 > [!NOTE]
-> Spacetime *(t, x, y, z)* is not represented formally here.
+> As absolute time is scoped within a frame of reference, spacetime *(t, x, y, z)* is not represented formally here.
 
-Practically speaking, as geologic time uses Earth as the frame of reference, so does this implementation of the Absolute Clock.
+Practically speaking, as geologic time uses Earth as the frame of reference, so does this implementation of the Absolute Clock. 
 
 
 ### More Absolute Time Examples
@@ -262,8 +262,8 @@ To get the current absolute time: `% go run absclock.go`
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
 * How to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
-* figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
+* consider expanded notation for expressing spacetime
 
