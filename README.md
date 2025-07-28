@@ -216,11 +216,14 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas din
 
 ### Absolute Time and Relativity
 
-(explain how a single event (represented as an absolute time string) works with relativity, e.g. two observers with separate frames of reference. How we're using Earth as the frame of reference, allowing geologic time to work.)
+The Absolute Clock is compatible with relativistic time. A string identifies an event *t*. 
+
+(explain how a single event (represented as an absolute time string) works with relativity, e.g. two observers with separate frames of reference.)
 
 > [!NOTE]
 > Spacetime *(t, x, y, z)* is not represented formally here.
 
+Practically speaking, as geologic time uses Earth as the frame of reference, so does this implementation of the Absolute Clock.
 
 
 ### More Absolute Time Examples
@@ -255,14 +258,12 @@ To get the current absolute time: `% go run absclock.go`
 * geological time enumerations should be scoped to the parent time unit. Fix age.
 * should the Meghalayan age be softcoded/calculated in the reference implementation?
 * consider subepoch, subperiod support
-* consider picoseconds, microseconds, etc. support
 * geological time element subunits vary based on the element; determine this representation
-* Possibly add a way to express durations for cyclical time elements (e.g. something starting at 2pm lasting for an hour could have an hour element of `14-15`)
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
 * How to represent the absence of any ages for the Přídolí epoch. (and similar situations.) An age of `0` indicates the time before the first age.
 * figure out how to represent months, days etc. in the pre-Hadean, when there was no Earth orbiting the Sun, therefore no notion of year subdivisions.
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
-* Consider changing the nanosecond field to "subsecond" with arbitrary precision
+* Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
 
