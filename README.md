@@ -218,6 +218,12 @@ This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas din
 
 (explain how a single event (represented as an absolute time string) works with relativity, e.g. two observers with separate frames of reference. How we're using Earth as the frame of reference, allowing geologic time to work.)
 
+> [!NOTE]
+> This is the content of your note.
+
+Spacetime *(t, x, y, z)* is not represented formally. 
+
+
 ### More Absolute Time Examples
 
 * Big Bang: `E:0:0:0:0:0:-13800000000` (13.8 billion years ago)
