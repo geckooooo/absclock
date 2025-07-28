@@ -115,13 +115,19 @@ The general format of Absolute Clock time is as follows:
     * Stage 2: `2` (age yet to be named)
     * Stage 3: `1` (first age of the Cambrian Series 2 epoch)
     * Stage 4: `2`
-    * ...
-    * ?: `1` (first age of the Miaolingian epoch)
-    * ?: `1` (first age of the Furongian epoch)
-    * ?: `1` (first age of the Early Ordovician epoch)
-    * ?: `1` (first age of the Middle Ordovician epoch)
-    * ?: `1` (first age of the Late Ordovician epoch)
-    * ...
+    * Wuliuan: `1` (first age of the Miaolingian epoch)
+    * Drumian: `2`
+    * Guzhangian: `3`
+    * Paibian: `1` (first age of the Furongian epoch)
+    * Jiangshanian: `2`
+    * Stage 10: `3` (age yet to be named)
+    * Tremadocian: `1` (first age of the Early Ordovician epoch)
+    * Floian: `2`
+    * Dapingian: `1` (first age of the Middle Ordovician epoch)
+    * Darriwilian: `2`
+    * Sandbian: `1` (first age of the Late Ordovician epoch)
+    * Katian: `2`
+    * Hirnantian: `3`
     * Rhuddanian: `1` (first age of the Llandovery epoch)
     * Aeronian: `2`
     * Telychian: `3`
