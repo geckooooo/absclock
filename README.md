@@ -192,22 +192,25 @@ The general format of Absolute Clock time is as follows:
     * Danian: `1` (first age of the Paleocene epoch)
     * Selandian: `2`
     * Thanetian: `3`
-    * Ypresian: `1` (first age of the Eocene)
+    * Ypresian: `1` (first age of the Eocene epoch)
     * Lutetian: `2`
     * Bartonian: `3`
     * Priabonian: `4`
-    * ...
-    * ?: `1` (first age of the Oligocene)
-    * ?: `n`
-    * ?: `1` (first age of the Miocene)
-    * ?: `n`
-    * ?: `1` (first age of the Pliocene)
-    * ?: `n`
-    * ...
-    * Gelasian: `1` (first age of the Pleistocene)
+    * Rupelian: `1` (first age of the Oligocene epoch)
+    * Chattian: `2`
+    * Aquitanian: `1` (first age of the Miocene epoch)
+    * Burdigalian: `2`
+    * Langhian: `3`
+    * Serravallian: `4`
+    * Tortonian: `5`
+    * Messinian: `6`
+    * Zanclean: `1` (first age of the Pliocene epoch)
+    * Piacenzian: `2`
+    * Gelasian: `1` (first age of the Pleistocene epoch)
     * Calabrian: `2`
     * Chibanian: `3`
-    * Greenlandian: `1` (first age of the Holocene)
+    * Late Pleistocene: `4`
+    * Greenlandian: `1` (first age of the Holocene epoch)
     * Northgrippian: `2`
     * Meghalayan `3` (the current age)
     * `1..n` (first age of a future epoch)
