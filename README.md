@@ -152,6 +152,11 @@ The general format of Absolute Clock time is as follows:
     * ?: `1` (first age of the Early Triassic epoch)
     * ?: `1` (first age of the Middle Triassic epoch)
     * ?: `1` (first age of the Late Triassic epoch)
+    * ?: `1` (first age of the Early Jurassic epoch)
+    * ?: `1` (first age of the Middle Jurassic epoch)
+    * ?: `1` (first age of the Late Jurassic epoch)
+    * ?: `1` (first age of the Early Cretaceous epoch)
+    * ?: `1` (first age of the Late Cretaceous epoch)
     * ...
     * Hettangian: `n`
     * Danian: `n` (first age of the Paleocene epoch)
@@ -208,6 +213,10 @@ Durations can be expressed with dashes (`-`) between two values in a field. For 
 
 This expresses an event happening on Chrismas 2025 at 4-9pm (maybe Christmas dinner).
 
+
+### Absolute Time and Relativity
+
+(explain how a single event (represented as an absolute time string) works with relativity, e.g. two observers with separate frames of reference. How we're using Earth as the frame of reference, allowing geologic time to work.)
 
 ### More Absolute Time Examples
 
