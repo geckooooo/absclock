@@ -2,6 +2,8 @@
 A new way to represent time
 
 ### Overview
+You may be asking yourself... what exactly is an Absolute Clock? And why am I here reading about it? Is this strange, seemingly useless invention the product of a fevered imagination? A break from time as we experience it in the boringly familiar ways?
+
 The Absolute Clock represents a single unique moment or event since the dawn of time (absolute time) as a colon-delimted string of time elements. Example:
 
 `E:4:3:3:2:3:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
