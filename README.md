@@ -295,7 +295,10 @@ Practically speaking, as geologic time uses Earth as the frame of reference, so 
 
 ### Reference Implementation
 
-This project implements this time notation with a reference implementation written in Go. This simple program spits out the current time in absolute time format.
+This project implements this time notation with a reference implementation written in Go. This simple program:
+
+* spits out the current time in absolute time format
+* illustrates how ISO 8601 dates are converted to absolute time
 
 To get the current absolute time: `% go run absclock.go`
 
@@ -317,7 +320,6 @@ To get the current absolute time: `% go run absclock.go`
 * should the Meghalayan age be softcoded/calculated in the reference implementation?
 * consider subepoch, subperiod support
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
-* Relate to the ISO 8601 time format
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
