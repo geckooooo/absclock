@@ -4,16 +4,24 @@ A new way to represent time
 ### Overview
 You may be asking yourself... what exactly is an Absolute Clock suppose to be? And why am I here reading about it? Is this strange, seemingly useless invention the product of a fevered imagination?
 
-The Absolute Clock is a major departure from time as we experience it in the boringly familiar ways. It represents a single unique moment or event since the dawn of time--absolute time, as perceived from the observer's frame of reference--as a colon-delimted string of time elements. Example:
+The Absolute Clock is a major departure from time as we experience it in the boringly familiar ways. It represents a single unique moment or event since the dawn of time--absolute time, as perceived from the observer's frame of reference--as a colon-delimted string of hierarchically contained time elements. Example:
 
 `E:4:3:3:2:3:2025:07:23:09:28:15:042:654321` (9:28am UTC on July 23rd, 2025)
+
+More on this below. 
+
+The Absolute Clock is... my answer to a chronic nuisance. I do not like how we have enculturated time, and here I reject it. There is no elegance in having clocks and calendars as separate, basically incompatible tools. There is no value in trapping the janky, split representation in its visual presentation, as if we’re stuck in some cognitive skeuomorphic fixation. There is no respect for the profound, almost extravagant timespans of the cosmos and all that has occurred. I see no reflection in it of the deep truths of relativity in spacetime. It is an incomplete, incoherent, and hidebound. It doesn't connect us to the cosmos the way it can.
+
+It is refreshingly unencumbered with practical considerations. For the most part!
+
+Is there any real-world value to this? Who knows! I think it’s kinda cool, with some pretty interesting qualities, some of which I didn’t expect, and I find it satisfyingly elegant. And that’s why I created it. Check it out!
 
 
 ### Problem Statement
 
-The normal way we express time is janky:
+The normal way we express time is quite janky:
 
-* We use three different representations: clock time, calendar time, geological time.
+* We use three different modes of representation to make sense of a single universal natural phenomenon: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
 * There is currently no universal time system in use that goes back to the Big Bang.
