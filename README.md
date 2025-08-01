@@ -12,7 +12,7 @@ More on this below.
 
 The Absolute Clock is... my answer to a chronic nuisance. I do not like how we have enculturated time, and here I reject it. There is no elegance in having clocks and calendars as separate, basically incompatible tools. There is no value in trapping the clunky, split representation in its visual presentation, as if we’re stuck in some cognitive skeuomorphic fixation. There is no respect for the profound, almost extravagant timespans of the cosmos and all that has occurred. I see no reflection in it of the deep truths of relativity in spacetime. It is an incomplete, incoherent, and hidebound. It doesn't connect us to the cosmos the way it can.
 
-It is refreshingly unencumbered with practical considerations. For the most part!
+It is refreshingly unencumbered with practical considerations. For the most part! (the truncation, wildcards, and duration expressions (defined below) notwithstanding.)
 
 Is there any real-world value to this? Who knows! I think it’s kinda cool, with some pretty interesting qualities, some of which I didn’t expect, and I find it satisfyingly elegant. And that’s why I created it. Check it out!
 
