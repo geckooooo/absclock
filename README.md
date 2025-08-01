@@ -234,6 +234,8 @@ The general format of Absolute Clock time is as follows:
 * `MSS`: **Millisecond.** 000-999. (1s = 1000ms.)
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
+> [!NOTE]
+> Geological time is used here because (as far as I can tell) there is no better expression for timespans leading back to the Big Bang. (And even this only goes back to the formation of Earth, which leaves a multi-billion year gap.) However, other planets and satellites (like Mars, Venus, and the moon) have their own specific (incompatible) geological time systems. So this only works on Earth absent the implementation of consistent geological time primitives across multiple planets or moons.
 
 ### Notation Variations
 
@@ -301,7 +303,6 @@ To get the current absolute time: `% go run absclock.go`
 ### Notes
 
 * Time is represented in UTC.
-* Only works on Earth pending implementation of consistent geological time primitives across multiple planets or moons. Currently other planets and satellites (like Mars, Venus, and the moon) have their own specific geological time.
 * Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
 * Resolution is determined by what temporal elements, if any, are omitted from the far right.
@@ -313,14 +314,11 @@ To get the current absolute time: `% go run absclock.go`
 
 ### To Do:
 
-* geological time enumerations should be scoped to the parent time unit. Fix age.
 * should the Meghalayan age be softcoded/calculated in the reference implementation?
 * consider subepoch, subperiod support
-* geological time element subunits vary based on the element; determine this representation
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Relate to the ISO 8601 time format
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
 * consider expanded notation for expressing spacetime
-
