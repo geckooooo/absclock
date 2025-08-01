@@ -12,14 +12,14 @@ More on this below.
 
 The Absolute Clock is... my answer to a chronic nuisance. I do not like how we have enculturated time, and here I reject it. There is no elegance in having clocks and calendars as separate, basically incompatible tools. There is no value in trapping the clunky, split representation in its visual presentation, as if we’re stuck in some cognitive skeuomorphic fixation. There is no respect for the profound, almost extravagant timespans of the cosmos and all that has occurred. I see no reflection in it of the deep truths of relativity in spacetime. It is an incomplete, incoherent, and hidebound. It doesn't connect us to the cosmos the way it can.
 
-It is refreshingly unencumbered with practical considerations. For the most part! (the truncation, wildcards, and duration expressions (defined below) notwithstanding.)
+It is refreshingly unencumbered with practical considerations. For the most part! (the truncation, wildcards, and duration expressions--defined below--notwithstanding.)
 
-Is there any real-world value to this? Who knows! I think it’s kinda cool, with some pretty interesting qualities, some of which I didn’t expect, and I find it satisfyingly elegant. And that’s why I created it. Check it out!
+Is there any real-world value to this? Who knows! I think it’s kinda cool, with some pretty interesting qualities, some of which I didn’t expect, and I find it satisfyingly elegant. That’s why I created it. Check it out!
 
 
 ### Problem Statement
 
-The normal way we express time is quite janky:
+The usual ways we express our experience of time is quite janky:
 
 * We use three different modes of representation to make sense of a single universal natural phenomenon: clock time, calendar time, geological time.
 * They each have their own tools, frameworks, and conceptions. A clock or watch for hours, minutes, and seconds, but a calendar for days, weeks, months, and years. The tools are completely different and unrelated, splitting out our experience of time irrationally.
@@ -235,7 +235,7 @@ The general format of Absolute Clock time is as follows:
 * `NSSSSS`: **Nanosecond.** 000000-999999. (1ms = 1M ns.)
 
 > [!NOTE]
-> Geological time is used here because (as far as I can tell) there is no better expression for timespans leading back to the Big Bang. (And even this only goes back to the formation of Earth, which leaves a multi-billion year gap.) However, other planets and satellites (like Mars, Venus, and the moon) have their own specific (incompatible) geological time systems. So this only works on Earth absent the implementation of consistent geological time primitives across multiple planets or moons.
+> Geological time is used here because (as far as I can tell) there is no better expression for timespans leading back to the Big Bang. (And even this only goes back to the formation of Earth, which leaves a multi-billion year gap.) However, other planets and satellites (like Mars, Venus, and the moon) have their own specific (incompatible) geological time systems. So this implementation of the Absolute Clock only works on Earth absent the implementation of consistent geological time primitives across multiple planets or moons.
 
 ### Notation Variations
 
