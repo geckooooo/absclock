@@ -1,5 +1,5 @@
 # The Absolute Clock
-A novel way to represent time
+_A novel way to represent time_
 
 ### Overview
 You may be asking yourself... what exactly is an Absolute Clock suppose to be? And why am I here reading about it? Is this strange, seemingly useless invention the product of a fevered imagination?
