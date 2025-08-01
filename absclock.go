@@ -12,8 +12,14 @@ import (
 )
 
 func main() {
+	// Get the current absolute time
 	currAbsoluteTime := getCurrentAbsoluteTime()
-	fmt.Println(currAbsoluteTime)
+	fmt.Println("           Current time: ", currAbsoluteTime)
+
+	// Convert an ISO 8601 string (UTC) to an absolute time string
+	iso8601 := "1776-07-04T12:00:00Z"
+	absTime := convertISO8601ToAbsoluteTime(iso8601)
+	fmt.Println("Converted from ISO 8601: ", absTime)
 }
 
 // Builds the absolute time string by extracting the current time
@@ -91,4 +97,20 @@ func getCurrentAbsoluteTime() string {
 
 	// Return the complete absolute time string
 	return builder.String()
+}
+
+// Converts an ISO 8601 string to an absolute time string
+func convertISO8601ToAbsoluteTime(iso8601 string) string {
+	// Parse the ISO 8601 string into a time.Time object
+	parsedTime, err := time.Parse(time.RFC3339, iso8601)
+
+	if err != nil {
+		return ""
+	}
+
+	// Convert the time.Time object to an absolute time string
+	// Note: truncated to the second
+	var absTime = "E:4:3:3:2:3:" + parsedTime.Format("2006:01:02:15:04:05")
+
+	return absTime
 }
