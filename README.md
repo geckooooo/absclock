@@ -2,7 +2,7 @@
 _A novel way to represent time_
 
 ### Overview
-You may be asking yourself... what exactly is an Absolute Clock suppose to be? And why am I here reading about it? Is this strange, seemingly useless invention the product of a fevered imagination?
+You may be asking yourself... what exactly is this Absolute Clock thing suppose to be? Is this strange, seemingly useless invention perhaps the product of a fevered imagination?
 
 The Absolute Clock is a major departure from time as we experience it in the boringly familiar ways. It represents a single unique moment or event since the dawn of time--absolute time, as perceived from the observer's frame of reference--as a colon-delimted string of hierarchically contained time elements. Example:
 
@@ -10,7 +10,7 @@ The Absolute Clock is a major departure from time as we experience it in the bor
 
 More on this below. 
 
-The Absolute Clock is... my answer to a chronic nuisance. I do not like how we have enculturated time, and here I reject it. There is no elegance in having clocks and calendars as separate, basically incompatible tools. There is no value in trapping the clunky, split representation in its visual presentation, as if we’re stuck in some cognitive skeuomorphic fixation. There is no respect for the profound, almost extravagant timespans of the cosmos and all that has occurred. I see no reflection in it of the deep truths of relativity in spacetime. It is an incomplete, incoherent, and hidebound. It doesn't connect us to the cosmos the way it can.
+The Absolute Clock is... my answer to a chronic nuisance. I do not like how we have enculturated time, and here I reject it. There is no elegance in having clocks and calendars as separate, basically incompatible tools. There is no value in trapping the clunky, split representation in its visual presentation, as if we’re stuck in some cognitive skeuomorphic fixation. There is no respect for the profound, almost extravagant timespans of the cosmos and all that has occurred. I see no reflection in it of the deep truths of relativity in spacetime. It is incomplete, incoherent, and hidebound. It doesn't connect us to the cosmos the way it can.
 
 It is refreshingly unencumbered with practical considerations. For the most part! (the truncation, wildcards, and duration expressions--defined below--notwithstanding.)
 
