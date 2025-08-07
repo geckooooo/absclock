@@ -26,7 +26,7 @@ The usual ways we express our experience of time is quite janky:
 * As there is no need for multiple representations, Occam's Razor prefers a single representation with a single tool.
 * There is currently no universal time system in use that goes back to the Big Bang.
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
-* It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation ("repeats weekly").
+* It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation (such as a "repeats weekly" dropdown).
 
 What's missing is a way of expressing time in a way that deeply connects to the cosmos--which ultimately is the true scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
 
