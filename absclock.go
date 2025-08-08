@@ -6,8 +6,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"strings"
 	"time"
 )
 
@@ -22,81 +20,19 @@ func main() {
 	fmt.Println("Converted from ISO 8601: ", absTime)
 }
 
-// Builds the absolute time string by extracting the current time
-// and formatting it according to the Absolute Clock specification.
-// This function duplicates the logic in main() for demonstration purposes.
+const (
+	eternity         = "E" // Eternity - represents the entire existence of time
+	phanerozoicEon   = "4" // Phanerozoic eon - the current eon (last 541 million years)
+	cenozoicEra      = "3" // Cenozoic era - the current era (last 66 million years)
+	quaternaryPeriod = "3" // Quaternary period - the current period (last 2.6 million years)
+	holoceneEpoch    = "2" // Holocene epoch - the current epoch (last 11,700 years)
+	meghalayanAge    = "3" // Meghalayan age - the current age (last 4,200 years)
+)
+
+// getCurrentAbsoluteTime builds the absolute time string for the current moment
+// by formatting it according to the Absolute Clock specification.
 func getCurrentAbsoluteTime() string {
-	// Get the current time broken into its components.
-	// Time is represented in UTC to ensure consistency across time zones.
-	now := time.Now().UTC()
-
-	// Extract individual time components and convert them to strings
-	year := strconv.Itoa(now.Year())
-	month := strconv.Itoa(int(now.Month()))
-	day := strconv.Itoa(now.Day())
-	hour := strconv.Itoa(now.Hour())
-	minute := strconv.Itoa(now.Minute())
-	second := strconv.Itoa(now.Second())
-	millisecond := strconv.Itoa(now.Nanosecond() / 1000000) // Convert nanoseconds to milliseconds
-	nanosecond := strconv.Itoa(now.Nanosecond() / 1000)     // Get microseconds within the current millisecond
-
-	// Pad the values with a leading zero if needed to ensure consistent formatting.
-	// This ensures all time components have at least 2 digits.
-	if now.Month() < 10 {
-		month = "0" + month
-	}
-	if now.Day() < 10 {
-		day = "0" + day
-	}
-	if now.Hour() < 10 {
-		hour = "0" + hour
-	}
-	if now.Minute() < 10 {
-		minute = "0" + minute
-	}
-	if now.Second() < 10 {
-		second = "0" + second
-	}
-
-	// Pad milliseconds and nanoseconds for consistent formatting
-	if (now.Nanosecond() / 1000000) < 100 {
-		millisecond = "0" + millisecond
-	}
-
-	if (now.Nanosecond() / 1000) < 100000 {
-		nanosecond = "0" + nanosecond
-	}
-
-	// Build the string using a string builder for efficiency
-	var builder strings.Builder
-
-	// Add geological time hierarchy - these values represent our current position in Earth's history
-	builder.WriteString("E:") // Eternity - represents the entire existence of time
-	builder.WriteString("4:") // Phanerozoic eon - the current eon (last 541 million years)
-	builder.WriteString("3:") // Cenozoic era - the current era (last 66 million years)
-	builder.WriteString("3:") // Quaternary period - the current period (last 2.6 million years)
-	builder.WriteString("2:") // Holocene epoch - the current epoch (last 11,700 years)
-	builder.WriteString("3:") // Meghalayan age - the current age (last 4,200 years)
-
-	// Add precise human time measurements
-	builder.WriteString(year) // Year (e.g., 2024)
-	builder.WriteString(":")
-	builder.WriteString(month) // Month (01-12)
-	builder.WriteString(":")
-	builder.WriteString(day) // Day (01-31)
-	builder.WriteString(":")
-	builder.WriteString(hour) // Hour (00-23)
-	builder.WriteString(":")
-	builder.WriteString(minute) // Minute (00-59)
-	builder.WriteString(":")
-	builder.WriteString(second) // Second (00-59)
-	builder.WriteString(":")
-	builder.WriteString(millisecond) // Millisecond (000-999)
-	builder.WriteString(":")
-	builder.WriteString(nanosecond) // Microsecond within millisecond (000000-999999)
-
-	// Return the complete absolute time string
-	return builder.String()
+	return formatTimeToAbsolute(time.Now().UTC())
 }
 
 // Converts an ISO 8601 string to an absolute time string
@@ -113,4 +49,38 @@ func convertISO8601ToAbsoluteTime(iso8601 string) string {
 	var absTime = "E:4:3:3:2:3:" + parsedTime.Format("2006:01:02:15:04:05")
 
 	return absTime
+}
+
+// formatTimeToAbsolute converts a time.Time to the absolute time string format
+func formatTimeToAbsolute(t time.Time) string {
+	// Extract time components
+	year := t.Year()
+	month := int(t.Month())
+	day := t.Day()
+	hour := t.Hour()
+	minute := t.Minute()
+	second := t.Second()
+	nanosecond := t.Nanosecond()
+
+	// Calculate milliseconds and microseconds within the current second
+	millisecond := nanosecond / 1000000
+	microsecond := (nanosecond / 1000) % 1000000 // microseconds within the current second
+
+	// Build the absolute time string using fmt.Sprintf for clean formatting
+	return fmt.Sprintf("%s:%s:%s:%s:%s:%s:%04d:%02d:%02d:%02d:%02d:%02d:%03d:%06d",
+		eternity,
+		phanerozoicEon,
+		cenozoicEra,
+		quaternaryPeriod,
+		holoceneEpoch,
+		meghalayanAge,
+		year,
+		month,
+		day,
+		hour,
+		minute,
+		second,
+		millisecond,
+		microsecond,
+	)
 }
