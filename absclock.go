@@ -16,7 +16,11 @@ func main() {
 
 	// Convert an ISO 8601 string (UTC) to an absolute time string
 	iso8601 := "1776-07-04T12:00:00Z"
-	absTime := convertISO8601ToAbsoluteTime(iso8601)
+	absTime, err := convertISO8601ToAbsoluteTime(iso8601)
+	if err != nil {
+		fmt.Printf("Error converting ISO 8601: %v\n", err)
+		return
+	}
 	fmt.Println("Converted from ISO 8601: ", absTime)
 }
 
@@ -35,6 +39,17 @@ func getCurrentAbsoluteTime() string {
 	return formatTimeToAbsolute(time.Now().UTC())
 }
 
+// convertISO8601ToAbsoluteTime converts an ISO 8601 string to an absolute time string
+func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
+	parsedTime, err := time.Parse(time.RFC3339, iso8601)
+	if err != nil {
+		return "", fmt.Errorf("failed to parse ISO 8601 time: %w", err)
+	}
+
+	return formatTimeToAbsolute(parsedTime.UTC()), nil
+}
+
+/*
 // Converts an ISO 8601 string to an absolute time string
 func convertISO8601ToAbsoluteTime(iso8601 string) string {
 	// Parse the ISO 8601 string into a time.Time object
@@ -49,7 +64,7 @@ func convertISO8601ToAbsoluteTime(iso8601 string) string {
 	var absTime = "E:4:3:3:2:3:" + parsedTime.Format("2006:01:02:15:04:05")
 
 	return absTime
-}
+}*/
 
 // formatTimeToAbsolute converts a time.Time to the absolute time string format
 func formatTimeToAbsolute(t time.Time) string {
