@@ -53,6 +53,7 @@ func getAgeForYear(year int) string {
 }
 
 // converts an ISO 8601 string to an absolute time string
+// note: the time package doesn't allow for dates before 1 CE.
 func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	parsedTime, err := time.Parse(time.RFC3339, iso8601)
 	if err != nil {
@@ -75,6 +76,7 @@ func formatTimeToAbsolute(t time.Time) string {
 	nanosecond := t.Nanosecond()
 
 	// Calculate milliseconds and microseconds within the current second
+	// Note: this needs conceptual clarification
 	millisecond := nanosecond / 1000000
 	microsecond := (nanosecond / 1000) % 1000000 // microseconds within the current second
 
