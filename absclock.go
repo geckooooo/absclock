@@ -25,12 +25,12 @@ func main() {
 }
 
 const (
-	eternity         = "E" // Eternity - represents the entire existence of time
-	phanerozoicEon   = "4" // Phanerozoic eon - the current eon (last 541 million years)
-	cenozoicEra      = "3" // Cenozoic era - the current era (last 66 million years)
-	quaternaryPeriod = "3" // Quaternary period - the current period (last 2.6 million years)
-	holoceneEpoch    = "2" // Holocene epoch - the current epoch (last 11,700 years)
-	meghalayanAge    = "3" // Meghalayan age - the current age (last 4,200 years)
+	eternity      = "E" // Eternity - represents the entire existence of time
+	currentEon    = "4" // Phanerozoic eon - the current eon (last 541 million years)
+	currentEra    = "3" // Cenozoic era - the current era (last 66 million years)
+	currentPeriod = "3" // Quaternary period - the current period (last 2.6 million years)
+	currentEpoch  = "2" // Holocene epoch - the current epoch (last 11,700 years)
+	currentAge    = "3" // Meghalayan age - the current age (last 4,200 years)
 )
 
 // getCurrentAbsoluteTime builds the absolute time string for the current moment
@@ -67,11 +67,11 @@ func formatTimeToAbsolute(t time.Time) string {
 	// Build the absolute time string using fmt.Sprintf for clean formatting
 	return fmt.Sprintf("%s:%s:%s:%s:%s:%s:%04d:%02d:%02d:%02d:%02d:%02d:%03d:%06d",
 		eternity,
-		phanerozoicEon,
-		cenozoicEra,
-		quaternaryPeriod,
-		holoceneEpoch,
-		meghalayanAge,
+		currentEon,
+		currentEra,
+		currentPeriod,
+		currentEpoch,
+		currentAge,
 		year,
 		month,
 		day,
