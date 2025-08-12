@@ -39,6 +39,7 @@ func getCurrentAbsoluteTime() string {
 }
 
 // Finds the age for a given year.
+// Expects BCE dates to be expressed as negative value (e.g. -5000 = 5000 BCE).
 // incomplete implementation; only handles years in the current epoch (Holocene).
 func getAgeForYear(year int) string {
 	if year >= -2200 {
