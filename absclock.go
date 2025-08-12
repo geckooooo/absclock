@@ -30,16 +30,28 @@ const (
 	currentEra    = "3" // Cenozoic era - the current era (last 66 million years)
 	currentPeriod = "3" // Quaternary period - the current period (last 2.6 million years)
 	currentEpoch  = "2" // Holocene epoch - the current epoch (last 11,700 years)
-	currentAge    = "3" // Meghalayan age - the current age (last 4,200 years)
 )
 
-// getCurrentAbsoluteTime builds the absolute time string for the current moment
+// builds the absolute time string for the current moment
 // by formatting it according to the Absolute Clock specification.
 func getCurrentAbsoluteTime() string {
 	return formatTimeToAbsolute(time.Now().UTC())
 }
 
-// convertISO8601ToAbsoluteTime converts an ISO 8601 string to an absolute time string
+// Finds the age for a given year.
+// incomplete implementation; only handles years in the current epoch (Holocene).
+func getAgeForYear(year int) string {
+	if year >= -2200 {
+		return "3" // Meghalayan Age (2200 BCE to today)
+	} else if year >= -6200 {
+		return "2" // Northgrippian Age (6200 to 2200 BCE)
+	} else if year >= -9700 {
+		return "1" // Greenlandian Age (9700 to 6200 BCE)
+	}
+	return "." // Placeholder--outside Holocene epoch
+}
+
+// converts an ISO 8601 string to an absolute time string
 func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	parsedTime, err := time.Parse(time.RFC3339, iso8601)
 	if err != nil {
@@ -49,9 +61,10 @@ func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	return formatTimeToAbsolute(parsedTime.UTC()), nil
 }
 
-// formatTimeToAbsolute converts a time.Time to the absolute time string format
+// converts a time.Time to the absolute time string format
 func formatTimeToAbsolute(t time.Time) string {
 	// Extract time components
+	age := getAgeForYear(t.Year()) // Age is inferred from the year
 	year := t.Year()
 	month := int(t.Month())
 	day := t.Day()
@@ -71,7 +84,7 @@ func formatTimeToAbsolute(t time.Time) string {
 		currentEra,
 		currentPeriod,
 		currentEpoch,
-		currentAge,
+		age,
 		year,
 		month,
 		day,
