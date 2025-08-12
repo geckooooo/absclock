@@ -40,7 +40,7 @@ func getCurrentAbsoluteTime() string {
 
 // Finds the age for a given year.
 // Expects BCE dates to be expressed as negative value (e.g. -5000 = 5000 BCE).
-// incomplete implementation; only handles years in the current epoch (Holocene).
+// Incomplete implementation; only handles years in the current epoch (Holocene).
 func getAgeForYear(year int) string {
 	if year >= -2200 {
 		return "3" // Meghalayan Age (2200 BCE to today)
@@ -52,8 +52,8 @@ func getAgeForYear(year int) string {
 	return "." // Placeholder--outside Holocene epoch
 }
 
-// converts an ISO 8601 string to an absolute time string
-// note: the time package doesn't allow for dates before 1 CE.
+// Converts an ISO 8601 string to an absolute time string
+// Note: the time package doesn't allow for dates before 1 CE.
 func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	parsedTime, err := time.Parse(time.RFC3339, iso8601)
 	if err != nil {
@@ -63,7 +63,7 @@ func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	return formatTimeToAbsolute(parsedTime.UTC()), nil
 }
 
-// converts a time.Time to the absolute time string format
+// Converts a time.Time to the absolute time string format
 func formatTimeToAbsolute(t time.Time) string {
 	// Extract time components
 	age := getAgeForYear(t.Year()) // Age is inferred from the year
