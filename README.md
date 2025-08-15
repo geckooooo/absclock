@@ -28,7 +28,7 @@ The usual ways we express our experience of time is quite janky:
 * There is currently no consistent geological time primitives across multiple planets or moons. Each celestial body has its own system.
 * It's awkward at best to express durations or repeating/cyclical events. Calendars sometime use visualizations to give this (size of the box on the calendar) but repetition has a separate representation (such as a "repeats weekly" dropdown).
 
-What's missing is a way of expressing time in a way that deeply connects to the cosmos--which ultimately is the true scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a signle device such as a digital clock.
+What's missing is a way of expressing time in a way that deeply connects to the cosmos--which ultimately is the true scope of time. The Absolute Clock rationalizes these different inconsistent, incomplete, and narrow perspectives into a unified coherent representation. Every single moment since the Big Bang has an "address" that is unique across all time. By doing so it creates a single namespace for absolute time that can be implemented as (say) a single device such as a digital clock.
 
 
 ### Absolute Time Representation
@@ -317,7 +317,6 @@ To get the current absolute time: `% go run absclock.go`
 
 ### To Do:
 
-* should the Meghalayan age be softcoded/calculated in the reference implementation?
 * consider subepoch, subperiod support
 * Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
 * Specifying timezone? (as arbitrary string appended to the hour or minute?)
