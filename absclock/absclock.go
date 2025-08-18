@@ -2,27 +2,12 @@
 // A clock that represents a single moment in time as a unique string.
 // This implementation creates a hierarchical time representation that includes
 // geological time periods followed by precise human time measurements.
-package main
+package absclock
 
 import (
 	"fmt"
 	"time"
 )
-
-func main() {
-	// Get the current absolute time
-	currAbsoluteTime := getCurrentAbsoluteTime()
-	fmt.Println("           Current time: ", currAbsoluteTime)
-
-	// Convert an ISO 8601 string (UTC) to an absolute time string
-	iso8601 := "1776-07-04T12:00:00Z"
-	absTime, err := convertISO8601ToAbsoluteTime(iso8601)
-	if err != nil {
-		fmt.Printf("Error converting ISO 8601: %v\n", err)
-		return
-	}
-	fmt.Println("Converted from ISO 8601: ", absTime)
-}
 
 const (
 	eternity      = "E" // Eternity - represents the entire existence of time
@@ -32,16 +17,19 @@ const (
 	currentEpoch  = "2" // Holocene epoch - the current epoch (last 11,700 years)
 )
 
+type AbsClock struct {
+}
+
 // builds the absolute time string for the current moment
 // by formatting it according to the Absolute Clock specification.
-func getCurrentAbsoluteTime() string {
-	return formatTimeToAbsolute(time.Now().UTC())
+func (clock *AbsClock) GetCurrentAbsoluteTime() string {
+	return clock.FormatTimeToAbsolute(time.Now().UTC())
 }
 
 // Finds the age for a given year.
 // Expects BCE dates to be expressed as negative value (e.g. -5000 = 5000 BCE).
 // Incomplete implementation; only handles years in the current epoch (Holocene).
-func getAgeForYear(year int) string {
+func (clock *AbsClock) GetAgeForYear(year int) string {
 	if year >= -2200 {
 		return "3" // Meghalayan Age (2200 BCE to today)
 	} else if year >= -6200 {
@@ -54,19 +42,19 @@ func getAgeForYear(year int) string {
 
 // Converts an ISO 8601 string to an absolute time string
 // Note: the time package doesn't allow for dates before 1 CE.
-func convertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
+func (clock *AbsClock) ConvertISO8601ToAbsoluteTime(iso8601 string) (string, error) {
 	parsedTime, err := time.Parse(time.RFC3339, iso8601)
 	if err != nil {
 		return "", fmt.Errorf("failed to parse ISO 8601 time: %w", err)
 	}
 
-	return formatTimeToAbsolute(parsedTime.UTC()), nil
+	return clock.FormatTimeToAbsolute(parsedTime.UTC()), nil
 }
 
 // Converts a time.Time to the absolute time string format
-func formatTimeToAbsolute(t time.Time) string {
+func (clock *AbsClock) FormatTimeToAbsolute(t time.Time) string {
 	// Extract time components
-	age := getAgeForYear(t.Year()) // Age is inferred from the year
+	age := clock.GetAgeForYear(t.Year()) // Age is inferred from the year
 	year := t.Year()
 	month := int(t.Month())
 	day := t.Day()
