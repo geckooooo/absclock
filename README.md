@@ -43,6 +43,9 @@ What's missing is a way of expressing time in a way that deeply connects to the 
 > By default, geological time represents years by Before Present (BP, prior to 1 Jan 1950 CE). However, non-geological time in the past is expressed using Common Era/Before Common Era (e.g. using BCE prior to 1 CE).
 > As there's a 1,950-year differential between the two, and the differential is of no consequence for geological timeframes, the Absolute Clock standardizes on CE/BCE.
 
+> [!NOTE]
+> Geological time is still being defined and further changes are expected in the coming years. The Absolute Clock is designed to be as future proof as possible, but you never know what could change!
+
 #### Format
 
 The general format of Absolute Clock time is as follows:
@@ -320,14 +323,14 @@ To get the current absolute time: `% go run absclock.go`
 * Time at the level of days, hours, etc. is represented in UTC.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
     * That said, there could be Mars, Venus, and moon versions of this clock!
-* Geologic time is still being defined and further changes are expected in the coming years.
 
 
 ### To Do:
 
 * consider subepoch, subperiod support
-* Consider support for specifying timezone (maybe as an arbitrary string appended to the hour or minute?)
-* Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
-* Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
+* consider support for specifying timezone (maybe as an arbitrary string appended to the hour or minute?)
+* consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
+* consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
 * consider expanded notation for expressing spacetime
-* Give examples of date math. Provide function that computes dates.
+* add date math support. Give examples. Provide a function in the reference implementation that computes absolute times.
+* add CLI parameters (e.g. `--now` to get the current time, `--iso8859 <time>` to convert an ISO 8859 timestamp).
