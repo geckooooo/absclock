@@ -13,8 +13,7 @@ func main() {
 	clock := absclock.AbsClock{}
 
 	// Get the current absolute time
-	currAbsoluteTime := clock.GetCurrentAbsoluteTime()
-	fmt.Println("           Current time: ", currAbsoluteTime)
+	fmt.Println("  Current absolute time: ", clock.GetCurrentAbsoluteTime())
 
 	// Convert an ISO 8601 string (UTC) to an absolute time string
 	iso8601 := "1776-07-04T12:00:00Z"

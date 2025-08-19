@@ -33,6 +33,18 @@ What's missing is a way of expressing time in a way that deeply connects to the 
 
 ### Absolute Time Representation
 
+#### Structure
+
+* Each time component is a subcomponent of the prior one (immediate left).
+* Values for each time element are in chronological order.
+* Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
+
+> [!NOTE]
+> By default, geological time represents years by Before Present (BP, prior to 1 Jan 1950 CE). However, non-geological time in the past is expressed using Common Era/Before Common Era (e.g. using BCE prior to 1 CE).
+> As there's a 1,950-year differential between the two, and the differential is of no consequence for geological timeframes, the Absolute Clock standardizes on CE/BCE.
+
+#### Format
+
 The general format of Absolute Clock time is as follows:
 
 `E:O:R:P:C:A:YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
@@ -245,7 +257,7 @@ the first portion of the string prior to the year--from eternity to age, `E:4:3:
 
 `YYYY:MM:DD:HH:MM:SS:MSS:NSSSSS`
 
-To ignore smaller units, say for rounding to the minute, simply truncate them the same way from the right:
+Resolution of the expression is determined by what temporal elements, if any, are omitted from the right. To ignore smaller units, say for rounding to the minute, simply truncate them:
 
 `E:O:R:P:C:A:YYYY:MM:DD:HH:MM`
 
@@ -305,11 +317,7 @@ To get the current absolute time: `% go run absclock.go`
 
 ### Notes
 
-* Time is represented in UTC.
-* Each time component is a subcomponent of the prior one (immediate left).
-* Values for each time element are in chronological order.
-* Resolution is determined by what temporal elements, if any, are omitted from the far right.
-* Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
+* Time at the level of days, hours, etc. is represented in UTC.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
     * That said, there could be Mars, Venus, and moon versions of this clock!
 * Geologic time is still being defined and further changes are expected in the coming years.
@@ -318,8 +326,8 @@ To get the current absolute time: `% go run absclock.go`
 ### To Do:
 
 * consider subepoch, subperiod support
-* Rationalize Before Present (BP, prior to 1 Jan 1950 CE) and Before Common Era (BCE, prior to 1 CE). 1,950-year differential. (possible solution: make it "BP - 1950" formally, which is effectively identical to unmodified BP)
-* Specifying timezone? (as arbitrary string appended to the hour or minute?)
+* Consider support for specifying timezone (maybe as an arbitrary string appended to the hour or minute?)
 * Consider changing the nanosecond field to "subsecond" with arbitrary precision. or another way to represent picoseconds, microseconds, etc. support
 * Consider ways of representing relative time in absolute format (e.g. "the day before yesterday" computed as absolute time from the current day)
 * consider expanded notation for expressing spacetime
+* Give examples of date math. Provide function that computes dates.
