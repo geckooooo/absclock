@@ -40,8 +40,7 @@ What's missing is a way of expressing time in a way that deeply connects to the 
 * Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
 
 > [!NOTE]
-> By default, geological time represents years by Before Present (BP, prior to 1 Jan 1950 CE). However, non-geological time in the past is expressed using Common Era/Before Common Era (e.g. using BCE prior to 1 CE).
-> As there's a 1,950-year differential between the two, and the differential is of no consequence for geological timeframes, the Absolute Clock standardizes on CE/BCE.
+> By default, geological time represents years using the [Before Present](https://en.wikipedia.org/wiki/Before_Present) system. However, non-geological time in the past is expressed using [Common Era/Before Common Era](https://en.wikipedia.org/wiki/Common_Era) system. As there's a 1,950-year differential between the two systems, and the differential is of no real consequence for geological timeframes, the Absolute Clock standardizes on CE/BCE.
 
 > [!NOTE]
 > Geological time is still being defined and further changes are expected in the coming years. The Absolute Clock is designed to be as future proof as possible, but you never know what could change!
