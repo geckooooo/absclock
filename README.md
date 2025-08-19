@@ -37,6 +37,7 @@ What's missing is a way of expressing time in a way that deeply connects to the 
 
 * Each time component is a subcomponent of the prior one (immediate left).
 * Values for each time element are in chronological order.
+* Time at the level of days, hours, etc. is represented in UTC.
 * Time units greater than the year are based on International Commission on Stratigraphy (ICS) geochronology.
 
 > [!NOTE]
@@ -319,7 +320,6 @@ To get the current absolute time: `% go run absclock.go`
 
 ### Notes
 
-* Time at the level of days, hours, etc. is represented in UTC.
 * Also, other planets and satellites (like Mars, Venus, and the moon) can have their own geological time systems. There is currently no universal time system in use that goes back to the Big Bang.
     * That said, there could be Mars, Venus, and moon versions of this clock!
 
